@@ -7,10 +7,10 @@
 answer()
 
 def strSipURI = currentCall.callerID
-def strNPA = SipURI.substring(0,3)
-def strNXX = SipURI.substring(3,6)
+def strNPA = strSipURI.substring(0,3)
+def strNXX = strSipURI.substring(3,6)
 
-   say("<speak> Hello, You are calling from <say-as interpret-as='vxml:digits'>$strSipURI</say-as>. </speak>")
+   say("<speak> Hello, You are calling from <say-as interpret-as='vxml:digits'>${strSipURI}</say-as>. </speak>")
 
 log("NPA = ${strNPA} NXX = ${strNXX}")
 
