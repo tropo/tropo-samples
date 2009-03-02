@@ -1,4 +1,8 @@
+// --------------------------------------------
 // Sample Tropo app in JavaScript
+// See http://www.tropo.com for more info
+// --------------------------------------------
+
 answer()
 
 var event=prompt("where are you heading?",

@@ -1,7 +1,8 @@
-﻿// -----------
+﻿// --------------------------------------------
 // say-as examples
-// -----------
-//
+// See http://www.tropo.com for more info
+// --------------------------------------------
+
 function doSay(p){
 log(LogPrefix + p.say_as_type);
 prompt(p.say_as_type);

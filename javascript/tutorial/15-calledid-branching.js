@@ -1,6 +1,7 @@
-// -----------
+// --------------------------------------------
 // Changing behavior based on number called
-// -----------
+// See http://www.tropo.com for more info
+// --------------------------------------------
 
 answer();
 

@@ -1,6 +1,7 @@
-// -----------
+// --------------------------------------------
 // handling bad choices and no response (timeout) with event handlers
-// -----------
+// See http://www.tropo.com for more info
+// --------------------------------------------
 
 answer();
 

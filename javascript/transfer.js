@@ -1,3 +1,8 @@
+// --------------------------------------------
+// demonstrating transfer to a SIP URI
+// See http://www.tropo.com for more info
+// --------------------------------------------
+
 answer()
 print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+callFactory);
 say("transfering to ");
