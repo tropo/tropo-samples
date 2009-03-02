@@ -7,7 +7,7 @@
 answer();
 
 $result = ask( "For sales, press 1. For support, press 2.", 
-				array( "choices" => "1, 2", "repeat" => 3, "timeout" => 5 ) );
+				array( "choices" => "1, 2", "repeat" => 3 ) );
 
 if ($result->name=="choice")
 {
