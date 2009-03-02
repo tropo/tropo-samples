@@ -1,5 +1,4 @@
  <?php
-require 'tropoStub.php';
 
 // ===========
 // Tropo basic auto attendant sample application

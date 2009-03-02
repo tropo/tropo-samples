@@ -1,5 +1,4 @@
 <?php
-require 'tropoStub.php';
 
 answer();
 
