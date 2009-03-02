@@ -6,9 +6,9 @@
 
 answer()
 
-def strSipURI = currentCall.getCallerId();
-def strNPA = SipURI.substring(0,3);
-def strNXX = SipURI.substring(3,6);
+def strSipURI = currentCall.callerID
+def strNPA = SipURI.substring(0,3)
+def strNXX = SipURI.substring(3,6)
 
    say("<speak> Hello, You are calling from <say-as interpret-as='vxml:digits'>$strSipURI</say-as>. </speak>")
 
