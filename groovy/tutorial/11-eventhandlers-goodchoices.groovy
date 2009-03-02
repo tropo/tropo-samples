@@ -8,7 +8,7 @@ ask( "Hi. For sales, just say sales or press 1. For support, say support or pres
 			[ 
 			  choices:"sales( 1, sales), support( 2, support)", repeat:3,
 			  onBadChoice: { say("I'm sorry, I didn't understand what you said.") },
-			  onTimeout: { say("Hm.  I didn't hear anything.") },
+			  onTimeout: { say("I'm sorry.  I didn't hear anything.") },
 			  onChoice: {event->
 				if (event.value=='sales')
 				{

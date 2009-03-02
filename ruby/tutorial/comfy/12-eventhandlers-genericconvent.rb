@@ -27,7 +27,7 @@ ask prompt, :choices => choices, :repeat => 3 do |link|
   end
   
   link.on :timeout do |event|
-    say 'Hm. I did not hear anything.'
+    say 'I am sorry. I did not hear anything.'
   end
 
 end

@@ -12,7 +12,7 @@ ask( "Hi. For sales, just say sales or press 1. For support, say support or pres
 				switch( event.name )
 				{
 					case 'badChoice': say( "I'm sorry, I didn't understand what you said."); break
-					case 'timeout'  : say( "Hm. I didn't hear anything."); break
+					case 'timeout'  : say( "I'm sorry. I didn't hear anything."); break
 					case 'choice'   :
 						switch ( event.value )
 						{
