@@ -1,4 +1,7 @@
+# --------------------------------------------
 # changing behavior based on number called
+# See http://www.tropo.com for more info
+# --------------------------------------------
 
 # HAS NOT BEEN VERIFIED TO WORK YET
 

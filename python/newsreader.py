@@ -1,5 +1,8 @@
+# --------------------------------------------
 # Reads the titles from Slashdot's RSS feed
 # Created by Atul Bargaje
+# See http://www.tropo.com for more info
+# --------------------------------------------
 
 import urllib2
 from xml.dom import minidom, Node

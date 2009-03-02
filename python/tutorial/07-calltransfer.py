@@ -1,4 +1,7 @@
+# --------------------------------------------
 # connecting the call to another number
+# See http://www.tropo.com for more info
+# --------------------------------------------
 
 answer()
 

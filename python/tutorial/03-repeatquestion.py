@@ -1,4 +1,7 @@
+# --------------------------------------------
 # Repeating the question
+# See http://www.tropo.com for more info
+# --------------------------------------------
 
 answer()
 

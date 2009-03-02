@@ -1,4 +1,7 @@
+# --------------------------------------------
 # Yahoo weather app
+# See http://www.tropo.com for more info
+# --------------------------------------------
 
 import urllib2
 from xml.dom import minidom, Node

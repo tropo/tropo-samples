@@ -1,6 +1,9 @@
+# --------------------------------------------
 # python app that says a random number between 1 and 100
 # Created by Dan York
 # Feb 24, 2008
+# See http://www.tropo.com for more info
+# --------------------------------------------
 
 from random import *
 

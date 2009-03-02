@@ -1,4 +1,9 @@
-﻿import re
+# --------------------------------------------
+# A Monty Python quote server (in python)
+# See http://www.tropo.com for more info
+# --------------------------------------------
+
+import re
 
 class getSearchTerm :
         def singleMatch( self, matchTerm, listCandidates ) :
