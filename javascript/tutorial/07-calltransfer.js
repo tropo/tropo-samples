@@ -8,12 +8,12 @@ result=ask( "For sales, just say sales or press 1. For support, say support or p
 
 if (result.name=='choice')
 {
-	if (result.value="sales") 
+	if (result.value=="sales") 
 	{ 
 		say( "Ok, let me transfer you to sales."       );
 		transfer( "14075551111");
 	}
-	if (result.value="support") 
+	if (result.value=="support") 
 	{ 
 		say( "Sure, let me get support.  Please hold." );
 		transfer( "14085552222");
