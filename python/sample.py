@@ -13,7 +13,7 @@ event=prompt("where are you heading?",
       event.onChoice( "3rd Floor", lambda : say("Your destination is 3rd Floor" ) ) and  
       event.onBadChoice( lambda : say("I can not recognize you. Please input again. ") ),
     'onTimeout':lambda : say("wait input time out" ), 
-    'onError':lambda : say("You've get an error!" ),
+    'onError':lambda : say("You've got an error!" ),
     'onHangup':lambda : log(">>>>>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<"),
     'onEvent':lambda event : 
       event.onError( lambda : say("You've got an error! " ) ) and

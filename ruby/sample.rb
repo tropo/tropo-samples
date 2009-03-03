@@ -10,7 +10,7 @@ event=prompt("where are you heading?",
     }, 
     'onTimeout'=>lambda { say "wait input time out" }, 
     'onHangup'=>lambda { puts ">>>>>>>>>>>>>>>>>>>Discnnected by the peer!<<<<<<<<<<<<<<<<<" },
-    'onError'=>lambda { say "You've get an error!" },
+    'onError'=>lambda { say "You've got an error!" },
     'onEvent'=>lambda { | event |
       say "inner callback got triggered by event " + event.name if event.name!="hangup"
       event.onError( lambda { say "You've got an error err! " } )
@@ -34,5 +34,5 @@ if event.name!="hangup"
   say "Thanks for testing Ruby on the Tropo platform"
   hangup
 else
-  puts ">>>>>>>>>>>>>>>Discnnected by the peer!<<<<<<<<<<<<<<<<<"
+  puts ">>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<"
 end
