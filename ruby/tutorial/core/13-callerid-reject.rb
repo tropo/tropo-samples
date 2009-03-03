@@ -2,11 +2,9 @@
 # reject based on callerid
 # -----------
 
-answer
+log "*"*100 + $currentCall.inspect
 
-log "*"*100 + currentCall.inspect
-
-if currentCall.callerID == '4153675082'
+if $currentCall.callerID == '4153675082'
 	answer
 	say 'Hello there and goodbye'
 	hangup
