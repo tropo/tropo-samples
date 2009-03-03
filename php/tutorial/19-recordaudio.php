@@ -12,8 +12,7 @@ answer();
 $result=record( "Hello.  Thanks for calling.  Leave your message at the beep.",
   				array( "beep" => true, "timeout" => 10, "silenceTimeout" => 7, "maxTime" => 60 ) );
 
-
-if( $result->name=='record' ) 
+if( $result->name == 'record' ) 
 { 
 	// record returns a URI pointing to the recorded audio...
 	

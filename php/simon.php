@@ -40,7 +40,7 @@ while ( ($win == true) && (count($simon) <= 20) ) {
 		$i++;
 	}  // while
 	
-	// if they won that round then see if we need to continue
+	// if the user won that round then see if we need to continue
 	if ($win == true) {
 		say("Good Job!");
 		wait(3);
