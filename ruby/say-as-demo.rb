@@ -1,4 +1,4 @@
-﻿
+
 answer
 
 s_log_prefix = "Log: "
