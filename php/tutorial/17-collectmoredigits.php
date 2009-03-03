@@ -38,8 +38,9 @@ if ($result->name=='choice') say( "Great, you said " . $result->value ) ;
 
 
 // digit collection also supports all other prompt properties and event handlers
+ _log( "$***********************result name " . $result->name );
 
-while( $result->name != "hangup" )
+while( $result->name != 'hangup' )
 {
 
   // collect 3 digits.  Reprompt up to 3 times.  Use a 7 second timeout...
