@@ -42,9 +42,9 @@ function listOptions( $theContacts )
 
 // define the list of contacts
 
-$contacts = array("jonathan"=> array("nameChoices" => "Jonathan, Jonathan Taylor", "number" => "14129272358" ),
-			      "michael" => array("nameChoices" => "Michael, Michael Smith",    "number" => "14074181800" ),
-				  "stephen" => array("nameChoices" => "Stephen, Stephen Neish",    "number" => "14129272341" ) );
+$contacts = array("nicole"=> array("nameChoices" => "Nicole, Nicole Williams", "number" => "12067927251" ),
+			      "april" => array("nameChoices" => "April, April Smith",      "number" => "14129272367" ),
+				  "gina"  => array("nameChoices" => "Gina, Gina Anderson",     "number" => "17135744782" ) );
 
 
 // answer the phone and play the initial greeting

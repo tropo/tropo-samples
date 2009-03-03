@@ -6,7 +6,7 @@
 answer();
 
 $result = ask( "For sales, just say sales or press 1. For support, say support or press 2.", 
-			array( "choices" => "sales( 1, sales), support( 2, support)", "repeat" => 3 ) );
+			array( "choices" => "sales( 1, sales), support( 2, support)" ) );
 
 if ($result->name=="choice")
 {
