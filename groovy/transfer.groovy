@@ -1,3 +1,8 @@
+// --------------------------------------------
+// call transfer example
+// See http://www.tropo.com for more info
+// --------------------------------------------
+
 answer()
 print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+callFactory);
 say("transfering to ");

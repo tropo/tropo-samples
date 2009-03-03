@@ -1,3 +1,7 @@
+// --------------------------------------------
+// demonstration of calling out
+// See http://www.tropo.com for more info
+// --------------------------------------------
 
 answer()
 print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>$callFactory");

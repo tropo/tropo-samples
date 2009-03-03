@@ -1,6 +1,9 @@
-// -----------
+// --------------------------------------------
 // say-as templates
-// -----------
+// demonstrates how to use <say-as> to change
+// how the text is read out
+// See http://www.tropo.com for more info
+// --------------------------------------------
 
 answer();
 s_log_prefix = "Log: "

@@ -1,3 +1,8 @@
+// --------------------------------------------
+// Sample application using many Tropo commands
+// See http://www.tropo.com for more info
+// --------------------------------------------
+
 answer()
 def event=prompt('where are you heading?',
   [repeat:3,choices:"1st Floor (first, house wares, 1),\n 2nd Floor (second, bed and bath, 2),\n 3rd Floor (third, sporting goods, 3)", timeout:10.03456789, 

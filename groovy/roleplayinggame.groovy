@@ -1,3 +1,10 @@
+// --------------------------------------------
+// A simple role-playing game 
+// (using some of the characters around the
+//  Voxeo office)
+// See http://www.tropo.com for more info
+// --------------------------------------------
+
 import java.util.Random;
 
 answer()

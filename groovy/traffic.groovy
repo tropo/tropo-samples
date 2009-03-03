@@ -1,12 +1,8 @@
+// --------------------------------------------
 // Gives you the traffic conditions based on a zip code
 // Mashup using Yahoo!Local by Gordon C.
-
-/* Debug Stubs for Tropo primitives
-def say(instr) {println instr}
-def answer() {println "answering phone"}
-def ask(instr,args) {println instr; println args}
-def hangup() {println "hanging up"}
-*/
+// See http://www.tropo.com for more info
+// --------------------------------------------
 
 answer() 
 
