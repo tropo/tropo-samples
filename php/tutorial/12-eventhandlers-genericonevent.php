@@ -9,25 +9,25 @@ ask( "Hi. For sales, just say sales or press 1. For support, say support or pres
 		array(
   				"choices" => "sales( 1, sales), support( 2, support)", 
   				"repeat"  => 3,
-			  	"onEvent" => create_function( '$event', <<<EOT
+			  	"onEvent" => create_function( '$event', 
 			 
-				if ($event->name == 'badChoice') say( "I am sorry, I didn't understand what you said.");
-				if ($event->name == 'timeout') say( "I am sorry. I didn't hear anything.");
-				if ($event->name == 'choice')
+				'if ($event->name == "badChoice") say( "I am sorry, I did not understand what you said.");
+				if ($event->name == "timeout") say( "I am sorry. I did not hear anything.");
+				if ($event->name == "choice")
 				{
-					if ($event->value == 'sales')
+					if ($event->value == "sales")
 					{
 						say( "Ok, let me transfer you to sales." );
 						transfer( "14129272358", array ("callerId" => "14074181800") );
 					}
-					if ($event->value == 'support')
+					if ($event->value == "support")
 					{
 						say( "Sure, let me get support.  Please hold." );
 						transfer( "14129272341", array ("callerId" => "14074181800")  );
 					}
-				}
+				}'
 				
-EOT
+
 				)
 		)
 );
