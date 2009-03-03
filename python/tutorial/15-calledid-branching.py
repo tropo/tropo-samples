@@ -3,8 +3,6 @@
 # See http://www.tropo.com for more info
 # --------------------------------------------
 
-# HAS NOT BEEN VERIFIED TO WORK YET
-
 answer()
 
 if (currentCall.calledID == '4075551111'):
