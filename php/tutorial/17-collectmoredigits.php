@@ -53,8 +53,8 @@ while( $result->name != "hangup" )
 					)
 				);
 
-  log( "$result name " . $result->name );
-  log( "number is " . $result->value );
+  _log( "$result name " . $result->name );
+  _log( "number is " . $result->value );
 
   if ($result->name=='choice') say( "Great, you said " . $result->value );
 
