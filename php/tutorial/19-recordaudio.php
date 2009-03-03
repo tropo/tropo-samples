@@ -17,11 +17,11 @@ if( $result->name=='record' )
 { 
 	// record returns a URI pointing to the recorded audio...
 	
-	log( "result.recordURI = " + $result->recordURI );
+	log( "result.recordURI = " . $result->recordURI );
 	
 	// we can then use that URI in a say command to play the recorded audio back...
 	
-	say( "you said " + $result->recordURI );
+	say( "you said " . $result->recordURI );
 }
 
 hangup();
