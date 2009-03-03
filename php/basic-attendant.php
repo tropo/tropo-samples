@@ -44,7 +44,7 @@ function listOptions( $theContacts )
 
 $contacts = array("nicole"=> array("nameChoices" => "Nicole, Nicole Williams", "number" => "12067927251" ),
 			      "april" => array("nameChoices" => "April, April Smith",      "number" => "14129272367" ),
-				  "gina " => array("nameChoices" => "Gina, Gina anderson",     "number" => "17135744782" ) );
+				  "gina"  => array("nameChoices" => "Gina, Gina Anderson",     "number" => "17135744782" ) );
 
 
 // answer the phone and play the initial greeting
