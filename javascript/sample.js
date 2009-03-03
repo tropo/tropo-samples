@@ -15,7 +15,7 @@ var event=prompt("where are you heading?",
     }, 
     onTimeout: function() { say("wait input time out"); }, 
     onHangup: function() { print(">>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<"); }, 
-    onError: function() { say("You've get an error!"); },
+    onError: function() { say("You've got an error!"); },
     onEvent: function(event) {
       if(event.name!="hangup"){ say("inner callback got triggered by event " + event.name);}
       event.onError( function() { say("You've got an error err! ") } );
