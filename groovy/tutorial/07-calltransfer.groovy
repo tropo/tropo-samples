@@ -13,12 +13,12 @@ if (result.name=='choice')
 	if (result.value=="sales") 
 	{ 
 		say( "Ok, let me transfer you to sales."       );
-		transfer( "14075551212");
+		transfer( "14129272358");
 	}
 	if (result.value=="support") 
 	{ 
 		say( "Sure, let me get support.  Please hold." );
-		transfer( "14085551212");
+		transfer( "14129272341");
 	}
 }
 
