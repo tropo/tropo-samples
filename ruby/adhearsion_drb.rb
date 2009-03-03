@@ -1,6 +1,6 @@
 #==========
 #Example that allows you to use Adhearsion (http://adhearsion.com)
-#with Tropo
+#via DRb with Tropo
 #==========
 require 'drb'
 
