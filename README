@@ -1,1 +1,44 @@
-Nothing to see here yet. Move along, please.
+================================================================
+================================================================
+        WELCOME TO TROPO SAMPLE APPLICATIONS
+
+The sample applications found in this repository are intended
+for use with Tropo, the new voice application platform created
+by Voxeo.  To use these applications, you need to go to:
+
+  http://www.tropo.com/
+
+and create a free developer account.  Once there, you can 
+create voice applications using these code examples.
+
+As noted in the accompanying LICENSE file, these examples are
+provided for you to use and modify without any restrictions.
+Please note that the examples are provided "AS IS" without 
+any warranty, etc. (Read the LICENSE file for exact terms.)
+
+This repository includes directories for each of the supported
+languages.  Inside each language directory, there is a 
+"tutorial" directory that has a series of simple tutorials
+designed to walk you through the process of creating Tropo
+applications.  We would suggest you start there.
+
+One note - in the 'ruby' directory, there are actually two
+versions of the tutorial files: "core" and "comfy".  The "core" 
+version of the tutorial uses syntax for Tropo that is very 
+similar to that of the other languages. The "comfy" version
+uses syntax that Ruby developers may find more "comfortable"
+and Ruby-esque.  Either form works.
+
+We expect to be updating this repository rather frequently 
+as we have new sample applications to offer. Please check 
+back - or clone the Github repo and do a 'git pull' from time 
+to time to see new additions.
+
+If you have sample applications you would like to offer us
+to include here, please contact Dan York ( dyork@voxeo.com ).
+
+Thank you for visiting Tropo.com and we look forward to 
+seeing whatever you may create!
+================================================================
+================================================================
+

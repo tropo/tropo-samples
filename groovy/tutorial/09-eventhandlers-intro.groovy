@@ -1,6 +1,7 @@
-// -----------
+// --------------------------------------------
 // handling wrong things the right way - introducing event handlers
-// -----------
+// See http://www.tropo.com for more info
+// --------------------------------------------
 
 answer();
 

@@ -1,6 +1,7 @@
-// -------------
-// Tutorial 16 - collecting digits
-// -------------
+// --------------------------------------------
+// collecting digits
+// See http://www.tropo.com for more info
+// --------------------------------------------
 
 answer();
 

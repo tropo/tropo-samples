@@ -1,3 +1,8 @@
+// --------------------------------------------
+// monty python quote server
+// See http://www.tropo.com for more info
+// --------------------------------------------
+
 def singleMatch( matchTerm, listCandidates )
 {
     matches = 0

@@ -1,3 +1,8 @@
+// --------------------------------------------
+// reads out the caller ID
+// See http://www.tropo.com for more info
+// --------------------------------------------
+
 def asDigits(instr) {
   def s  = '';
  

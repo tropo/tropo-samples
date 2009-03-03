@@ -1,4 +1,7 @@
+// --------------------------------------------
 // location mashup example by Dustin H.
+// See http://www.tropo.com for more info
+// --------------------------------------------
 
 // NOTE: To use this sample, you need to obtain a valid license key from
 // http://www.fraudlabs.com/areacodeworld.aspx

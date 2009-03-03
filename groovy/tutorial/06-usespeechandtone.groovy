@@ -1,6 +1,7 @@
-// -----------
+// --------------------------------------------
 // using both speech and touch-tone input
-// -----------
+// See http://www.tropo.com for more info
+// --------------------------------------------
 
 answer();
 

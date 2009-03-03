@@ -1,6 +1,7 @@
-// -------------
-// Tutorial 17 - collecting more digits with more varities
-// -------------
+// --------------------------------------------
+// collecting more digits with more varities
+// See http://www.tropo.com for more info
+// --------------------------------------------
 
 
 answer();

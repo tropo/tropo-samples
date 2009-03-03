@@ -1,6 +1,7 @@
-// -----------
+// --------------------------------------------
 // using the generic onEvent handler instead
-// -----------
+// See http://www.tropo.com for more info
+// --------------------------------------------
 
 answer();
 

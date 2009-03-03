@@ -1,3 +1,8 @@
+// --------------------------------------------
+// using recording inside of a prompt command
+// See http://www.tropo.com for more info
+// --------------------------------------------
+
 answer()
 
 wait(1000) // wait for 1 second

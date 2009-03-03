@@ -1,3 +1,8 @@
+// --------------------------------------------
+// outgoing call example
+// See http://www.tropo.com for more info
+// --------------------------------------------
+
 // If this script is called via HTTP, the initial "answer();" can be
 // removed.
 
