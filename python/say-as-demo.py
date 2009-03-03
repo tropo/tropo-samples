@@ -1,3 +1,4 @@
+# --------------------------------------------
 #
 #  The application demonstrates how to use say-as constructions
 #  for mostly-used variables, represented 
@@ -5,6 +6,8 @@
 #  digits, numbers, 
 #  currency, phone
 #
+# See http://www.tropo.com for more info
+# --------------------------------------------
 #
 answer()
 s_log_prefix = "Log: "

@@ -7,7 +7,7 @@ answer
 options = { :choices     => 'sales( 1, sales), support( 2, support)',
             :repeat      => 3,
             :onBadChoice => lambda { say 'I am sorry, I did not understand what you said.' },
-            :onTimeout   => lambda { say 'Hm.  I did not hear anything.' }, 
+            :onTimeout   => lambda { say 'I am sorry.  I did not hear anything.' }, 
             :onChoice    => lambda { |event| 
                                        case event.value
                                        when 'sales'

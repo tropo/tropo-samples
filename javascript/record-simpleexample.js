@@ -1,3 +1,7 @@
+// --------------------------------------------
+// Simple example of recording
+// See http://www.tropo.com for more info
+// --------------------------------------------
 answer();
 
 event=record("Leave your message at the beep.  Thanks!",

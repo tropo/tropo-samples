@@ -1,3 +1,8 @@
+// --------------------------------------------
+// collect digits
+// See http://www.tropo.com for more info
+// --------------------------------------------
+
 answer();
 
 result=prompt( "Hello.  Please enter any number", {choices:"[DIGITS]"} );

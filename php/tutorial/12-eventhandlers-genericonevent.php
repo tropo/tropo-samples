@@ -11,8 +11,8 @@ ask( "Hi. For sales, just say sales or press 1. For support, say support or pres
   				"repeat"  => 3,
 			  	"onEvent" => create_function( '$event', <<<EOT
 			 
-				if ($event->name == 'badChoice') say( "I'm sorry, I didn't understand what you said.");
-				if ($event->name == 'timeout') say( "Hm. I didn't hear anything.");
+				if ($event->name == 'badChoice') say( "I am sorry, I didn't understand what you said.");
+				if ($event->name == 'timeout') say( "I am sorry. I didn't hear anything.");
 				if ($event->name == 'choice')
 				{
 					if ($event->value == 'sales')

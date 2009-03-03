@@ -7,7 +7,7 @@ answer();
 result=ask( "For sales, just say sales or press 1. For support, say support or press 2.", 
 			[ choices:"sales( 1, sales), support( 2, support)", repeat:3,
 			  onBadChoice: { say("I'm sorry, I didn't understand what you said.") },
-			  onTimeout: { say("Hm.  I didn't hear anything.") }
+			  onTimeout: { say("I'm sorry.  I didn't hear anything.") }
 			] );
 
 if (result.name=='choice')

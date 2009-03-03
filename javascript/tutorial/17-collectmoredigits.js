@@ -1,3 +1,8 @@
+// --------------------------------------------
+// collect more digits
+// See http://www.tropo.com for more info
+// --------------------------------------------
+
 answer();
 
 // ask for a single digit

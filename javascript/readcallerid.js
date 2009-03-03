@@ -1,3 +1,8 @@
+// --------------------------------------------
+// read out the caller ID
+// See http://www.tropo.com for more info
+// --------------------------------------------
+
 function asDigits(instr) {
   var s  = '';
  

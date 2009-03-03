@@ -1,6 +1,7 @@
-# -------------------------------------
-# handling the wrong the the right way - introducing event handlers
-# -------------------------------------
+# --------------------------------------------
+# handling the wrong choice the the right way - introducing event handlers
+# See http://www.tropo.com for more info
+# --------------------------------------------
 
 answer()
 

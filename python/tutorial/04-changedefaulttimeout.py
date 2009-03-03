@@ -1,4 +1,7 @@
+# --------------------------------------------
 # Changing the default timeout
+# See http://www.tropo.com for more info
+# --------------------------------------------
 
 answer()
 

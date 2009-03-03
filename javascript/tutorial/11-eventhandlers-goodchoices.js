@@ -1,6 +1,7 @@
-// -----------
+// --------------------------------------------
 // handling good choices with event handlers too
-// -----------
+// See http://www.tropo.com for more info
+// --------------------------------------------
 
 answer();
 
@@ -8,7 +9,7 @@ ask( "Hi. For sales, just say sales or press 1. For support, say support or pres
 			{ 
 			  choices:"sales( 1, sales), support( 2, support)", repeat:3,
 			  onBadChoice: function() { say("I'm sorry, I didn't understand what you said.") },
-			  onTimeout:   function() { say("Hm.  I didn't hear anything.") },
+			  onTimeout:   function() { say("I'm sorry.  I didn't hear anything.") },
 			  onChoice:    function( event )
 			  {
 				if (event.value=='sales')

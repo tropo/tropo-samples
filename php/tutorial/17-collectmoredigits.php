@@ -48,7 +48,7 @@ while( $result->name != "hangup" )
 					array(
         				"choices"  => "[1-3 DIGITS]", "repeat" => 3, "timeout" => 7,
   					  	"onBadChoice" => create_function( '$event', 'say("I am sorry, I did not understand what you said.");' ),
-					  	"onTimeout"   => create_function( '$event', 'say("Hm.  I didn\'t hear anything.");' )
+					  	"onTimeout"   => create_function( '$event', 'say("I am sorry.  I didn\'t hear anything.");' )
 
 					)
 				);

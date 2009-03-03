@@ -1,4 +1,7 @@
+# --------------------------------------------
 # Using speech input instead of touch-tone
+# See http://www.tropo.com for more info
+# --------------------------------------------
 
 answer()
 
