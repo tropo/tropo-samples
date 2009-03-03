@@ -10,9 +10,9 @@ result = ask("Hi. For sales, say sales or press 1. For support, say support or p
 if (result.name == 'choice'):
     if (result.value == "sales"): 
         say("Ok, let me transfer you to sales")
-	transfer("14075551111")
+	transfer("14129272358")
     if (result.value == "support"): 
         say("Ok, let me transfer you to support")
-	transfer("14075552222")
+	transfer("14129272341")
 
 hangup()
