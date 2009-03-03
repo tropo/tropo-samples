@@ -9,11 +9,11 @@
 
 answer()
 
-def strSipURI = currentCall.callerID
-def strNPA = strSipURI.substring(0,3)
-def strNXX = strSipURI.substring(3,6)
+def strSipURI = currentCall.callerID;
+def strNPA = SipURI.substring(0,3);
+def strNXX = SipURI.substring(3,6);
 
-   say("<speak> Hello, You are calling from <say-as interpret-as='vxml:digits'>${strSipURI}</say-as>. </speak>")
+   say("<speak> Hello, You are calling from <say-as interpret-as='vxml:digits'>$strSipURI</say-as>. </speak>")
 
 log("NPA = ${strNPA} NXX = ${strNXX}")
 
@@ -25,3 +25,4 @@ def strXML = parser.parseText (xml)
   say(" which is located in ${strXML.CITY.text()} at latitude ${strXML.LATITUDE.text()} and longitude ${strXML.LONGITUDE.text()}. You are in ${strXML.COUNTY.text()} county, which has a population of ${strXML.COUNTY_POPULATION.text()}. Your time zone is G M T ${strXML.TIMEZONE.text()}".toLowerCase());
 
 hangup()
+
