@@ -54,12 +54,11 @@ end
 ## digit collection also supports all other ask properties and event handlers
 
 while result.name != 'hangup' 
-{
 
   ## collect 3 digits.  Reask up to 3 times.  Use a 7 second timeout...
 
   result=ask 'Now please enter a number between 1 and 999', 
-        			{:choices     => '{1-3 DIGITS]', :repeat => 3, :timeout => 7,
+        			{:choices     => '[1-3 DIGITS]', :repeat => 3, :timeout => 7,
          			 :onTimeout   =>  lambda { say 'Im sorry, I did not hear anything.' },
          			 :onBadChoice =>  lambda { say 'Im sorry, I did not understand your response.' }
 					    }
@@ -72,6 +71,6 @@ while result.name != 'hangup'
     say 'Great, you said ' + result.value
   end
 
-}
+end
 
 hangup

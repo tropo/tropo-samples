@@ -596,10 +596,6 @@ if ( gState.gLastError != "" ) {
 }
 
 
-gState.gPageItemsSet.each() { item ->
-	printItem( item );
-}
-
 say("Hello and welcome to Google Reader phone application.");
 
 while (1) {
