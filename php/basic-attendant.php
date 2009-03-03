@@ -5,13 +5,6 @@
 // v1 jrt -> php rsc
 // ===========
 
-// -----------
-// kludge to quit
-
-function allDone()
-{
-   throw( "exiting" );
-}
 
 // -----------
 // turn the contacts into a comma seperated list of names
