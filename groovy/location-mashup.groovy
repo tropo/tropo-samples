@@ -10,14 +10,14 @@
 answer()
 
 def strSipURI = currentCall.callerID;
-def strNPA = SipURI.substring(0,3);
-def strNXX = SipURI.substring(3,6);
+def strNPA = strSipURI.substring(0,3);
+def strNXX = strSipURI.substring(3,6);
 
-   say("<speak> Hello, You are calling from <say-as interpret-as='vxml:digits'>$strSipURI</say-as>. </speak>")
+  say("<speak> Hello, You are calling from <say-as interpret-as='vxml:digits'>$strSipURI</say-as>. </speak>")
 
 log("NPA = ${strNPA} NXX = ${strNXX}")
 
-String xml = "http://ws.fraudlabs.com/areacodeworldwebservice.asmx/AreaCodeWorld?NPA=$strNPA&NXX=$strNXX&LICENSE=LICENSEKEY".toURL().text 
+String xml = "http://ws.fraudlabs.com/areacodeworldwebservice.asmx/AreaCodeWorld?NPA=$strNPA&NXX=$strNXX&LICENSE=07-G95J-T32A".toURL().text 
 
 XmlParser parser = new XmlParser()
 def strXML = parser.parseText (xml)
