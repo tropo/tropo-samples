@@ -4,10 +4,26 @@
 // --------------------------------------------
 
 answer()
-print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+callFactory);
+print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + callFactory);
 say("transfering to ");
 
-def ncall = currentCall.transfer("sip:81345209477@221.122.54.86", 30000);
-print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+ncall);
-log("Successfully transferred");
+def ncall = currentCall.transfer("sip:914074181800@10.6.63.201", [
+        answerOnMedia: false,
+        callerId:      "tel:+14076179024",
+        timeout:       60.3456,
+        method:        "bridged", // fixed to bridged currently
+        playrepeat:    3,
+        playvalue:     "Ring... Ring... Ring...",
+        choices:       "1,2,3,4,5,6,7,8,9,0,*,#",
+                onSuccess:     { ncall-> log("*********transfered to $ncall.value.calleeId") },  
+                onError:       { ncall-> log("*********transfer error") },  
+                onTimeout:     { ncall-> log("*********transfer timeout") },  
+                onCallFailure: { ncall-> log("*********transfer failed") },  
+                onChoice:      { ncall-> log("*********transfer canceled") }  
+        ]
+)
+
+print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + ncall);
+
+hangup()
 
