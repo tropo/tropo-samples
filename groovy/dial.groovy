@@ -4,11 +4,29 @@
 // --------------------------------------------
 
 answer()
-print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>$callFactory");
-say("transfering to ");
+print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>$callFactory")
+say("transfering to ")
 
-def ncall = call("sip:81345209477@221.122.54.86", "sip:81345209477@221.122.54.86");
-ncall.prompt("call to sip:81345209477@221.122.54.86", "", 10000);
-ncall.prompt("This a dial test for JavaScript on the Tropo platform.", "", 10000);
-ncall.hangup()
+// Place a phone number here
+def phoneNo = 14074181800
+
+def event = call("sip:${phoneNo}@10.6.63.201",
+      [
+      answerOnMedia: false,
+      callerID:      "tel:+666666666666",
+      timeout:        60.3456,
+      // Error in debugger if event.value.calleeId is used
+      onAnswer:       { event-> log("******************** Answered from ") },
+      onError:        { log("******************** oops , error *********************") },
+      onTimeout:      { log("******************** timeout *********************") },
+      onCallFailure:  { log("******************** call failed *********************") }
+      ] )
+
+if (event.choice == 'answer'){
+  def ncall=event.value
+  ncall.say("call to sip:" + phoneNo + "@10.6.63.201")
+  ncall.say("This a dial test for Groovy on the Tropo platform.")
+  ncall.hangup()
+}
 hangup()
+
