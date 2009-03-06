@@ -1,7 +1,7 @@
 #----------
 #Yahoo local search app using YQL/JSON
 #----------
-require 'net/http'
+require 'open-uri'
 require 'json'
 
 answer 
@@ -19,12 +19,17 @@ zipcode_options = { :choices     => "[5 DIGITS]",
                                          :onBadChoice => lambda { say 'Invalid entry, please try again.' },
                                          :onTimeout   => lambda { say 'Timeout, please try again.' },
                                          :onChoice    => lambda { |search_choice|
-                                           log '===========>' + search_choice.inspect + '<============'
+
+                                           #Set the URI and our YQL select statement, then encode as a URI
                                            yahoo_url = 'http://query.yahooapis.com/v1/public/yql?format=json&q='
                                            query = "select * from local.search where zip=#{zip_code_choice.value} and query='#{search_choice.value}'"
                                            url = URI.encode(yahoo_url + query)
-                                           json_data = Net::HTTP.get_response(URI.parse(url)).body
-                                           restaraunts = JSON.parse(json_data)
+
+                                           #Fetch the JSON from the YQL API and convert the resulting 
+                                           #JSON data to a Ruby hash
+                                           restaraunts = JSON.parse(open(url).read)
+
+                                           #Speak back the results
                                            if restaraunts
                                              restaraunts["query"]["results"]["Result"].each do |restaraunt|
                                                say 'The phone number for ' + restaraunt["Title"] + ' in ' + restaraunt["City"] + 
@@ -40,6 +45,5 @@ zipcode_options = { :choices     => "[5 DIGITS]",
           }
   
 ask 'Enter or say your ZIP code to find a Restaurant in your area.', zipcode_options
-
 say 'Thats all. Goodbye.'
 hangup

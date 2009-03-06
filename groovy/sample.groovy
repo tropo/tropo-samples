@@ -13,7 +13,7 @@ def event=prompt('where are you heading?',
      event.onBadChoice( { say('I can not recognize you. Please input again. ') } ) 
      }, 
      onTimeout: { say('wait input time out') }, 
-     onError: { say('You"ve get an error!') },
+     onError: { say('You"ve got an error!') },
      onHangup: { println ">>>>>>>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<" },
      onEvent: { event->
      if (event.name!="hangup"){ say('inner generic callback got triggered by event ' + event.name)}
@@ -42,5 +42,5 @@ if (event.name!="hangup"){
   hangup()
 }
 else{
-  println ">>>>>>>>>>>>>>>Discnnected by the peer!<<<<<<<<<<<<<<<<<"
+  println ">>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<"
 }

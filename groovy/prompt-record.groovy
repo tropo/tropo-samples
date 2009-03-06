@@ -5,10 +5,10 @@
 
 answer()
 
-wait(1000) // wait for 1 second
-log("this is a log demo")
-currentCall.log("Incoming call info [state:" + currentCall.state()  + ",callerID:"+ currentCall.callerID + ",callleeId:" + currentCall.calleeId
-	+ ",callerName:" + currentCall.callerName + ",calleeName:" + currentCall.calleeId)
+await(1000) // wait for 1 second. PLEASE USE await in Groovy
+log("This is a log demo")
+// currentCall.calleeId, currentCall.calleeID don't work
+currentCall.log("Incoming call info [state:" + currentCall.state() + ", callerID:" + currentCall.callerID + ", callerName:" + currentCall.callerName + "]")
 
 def event=prompt("http://127.0.0.1:8080/beep.wav where are you heading?",
    [repeat:3,record:true, beep:true, silenceTimeout: 3, maxTime:30,timeout:20.03456789,
@@ -26,7 +26,7 @@ def event=prompt("http://127.0.0.1:8080/beep.wav where are you heading?",
     onEvent: {event->
       if(event.name!="hangup"){ say("inner callback got triggered by event " + event.name);}
       event.onError( { say("000You've got an error err! ") } );
-      event.onTimeout( { say("000wait input time out") } );
+      event.onTimeout( { say("000Wait input time out") } );
       event.onHangup( { print("000Discnnected by the peer!<<<<<<<<<<<<<<<<<") } );
       event.onChoice( "1st Floor", { say("Your destination is 1st Floor") } );
       event.onChoice( "2nd Floor", { say("Your destination is 2nd Floor") } );
@@ -46,9 +46,10 @@ if(event.name!="hangup"){
   event.onChoice( "3rd Floor", { say("Your destination is 3rd Floor") } ); 
   event.onBadChoice( { say("I can not recognize you") } ); 
   event.onRecord( {recordEvent-> say("you said " + recordEvent.recordURI );});
-  say("Thanks for testing Java Script on the Tropo platform");
+  say("Thanks for testing Groovy on the Tropo platform");
   hangup()
 }
 else{
   print(">>>>>>>>>>>>>>>Discnnected by the peer!<<<<<<<<<<<<<<<<<");
 }
+
