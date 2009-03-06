@@ -16,12 +16,12 @@ options = { :choices => 'sales( 1, sales), support( 2, support)',
                                     case event.value
                                     when 'sales'
                                       say 'Ok, let me transfer you to sales.'
-                                      transfer '14075551212'
+                                      transfer '14129272358'
                                     when 'support'
                                       say 'Sure, let me get support.  Please hold.'
-                                      transfer '14085551212'
+                                      transfer '14129272341'
                                     else
-                                      transfer '14075551212'
+                                      transfer '14129272358'
                                     end
                                   end
                                 }
