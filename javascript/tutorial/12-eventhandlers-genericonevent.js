@@ -19,11 +19,11 @@ ask( "Hi. For sales, just say sales or press 1. For support, say support or pres
 						{
 							case 'sales':
 								say( "Ok, let me transfer you to sales." );
-								transfer( "14075551111");
+								transfer( "14129272358");
 							break
 							case 'support':
 								say( "Sure, let me get support.  Please hold." );
-								transfer( "14075552222");
+								transfer( "14129272341");
 							break					
 						}		
 				}	
