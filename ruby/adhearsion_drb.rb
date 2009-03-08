@@ -6,7 +6,7 @@ require 'drb'
 
 #Connect to your Adhearsion instance running across the internets
 #In the future this will be REST
-Adhearsion = DRbObject.new_with_uri 'druby://sandite.orl.voxeo.net:9050'
+Adhearsion = DRbObject.new_with_uri 'druby://yourhost.net:9050'
 
 answer 
 
