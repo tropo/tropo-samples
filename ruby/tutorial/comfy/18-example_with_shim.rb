@@ -311,13 +311,13 @@ call.ask prompt, :choices => choices, :repeat => 3, :timeout => 10 do |link|
     case event.value
     when 'sales'
       call.say 'Ok, let me transfer you to sales.'
-      transfer '14129272358'
+      call.transfer '14129272358'
     when 'support'
       call.say 'Sure, let me get support.  Please hold.'
-      transfer '14129272341'
+      call.transfer '14129272341'
     else
       call.say 'An error has occurred, one moment please.'
-      transfer '14129272358'
+      call.transfer '14129272358'
     end
   end
   
