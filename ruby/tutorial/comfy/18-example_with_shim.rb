@@ -305,7 +305,7 @@ call.answer
 prompt  = 'Hi. For sales, just say sales or press 1. For support, say support or press 2.'
 choices = 'sales( 1, sales), support( 2, support)'
 
-call.ask prompt, :choices => choices, :repeat => 3 do |link|
+call.ask prompt, :choices => choices, :repeat => 3, :timeout => 10 do |link|
 
   link.on :choice do |event|
     case event.value
