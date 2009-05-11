@@ -8,9 +8,6 @@
 #
 # Try it out at any of these numbers:
 # POTS: 1-312-957-8992
-# Skype: +99000936 9991428656
-# SIP: sip:9991428656@sip.tropo.com
-# INum: +88351000180436
  
 require 'rexml/document'
 require 'open-uri'
