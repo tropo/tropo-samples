@@ -4,9 +4,9 @@
 
 answer
 
-if $currentCall.callerID == '4075551111'
+if $currentCall.calledID == '4075551111'
     say 'Hello Andrew.'
-elsif $currentCall.callerID == '4075552222'
+elsif $currentCall.calledID == '4075552222'
     say 'Hello Brian.'
 end
 
