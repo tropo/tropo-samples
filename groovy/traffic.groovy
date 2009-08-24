@@ -1,9 +1,3 @@
-// --------------------------------------------
-// Gives you the traffic conditions based on a zip code
-// Mashup using Yahoo!Local by Gordon C.
-// See http://www.tropo.com for more info
-// --------------------------------------------
-
 answer() 
 
 def asDigits(instr) {
@@ -17,18 +11,11 @@ def asDigits(instr) {
 }
 
 def getZipCode() {
-    def zipcode = ''
-    def bDone  = false
-    while (!bDone) {
-        event = ask( "",[choices:"0,1,2,3,4,5,6,7,8,9",timeout:10])
-        if (event.name=="choice") {
-            zipcode += event.value
-            } else {
-            bDone = true
-        }    
-        if (zipcode.length() == 5) {bDone = true}
-    }
-    return zipcode
+        event = ask( "",[ choices:"[5 DIGITS]", repeat:3, timeout:60,
+        onTimeout: { say( "I'm sorry, I didn't hear anything.") },
+        onBadChoice: { say( "I'm sorry, I did not understand your response.") }]);
+        if (event.name=="choice") {zipcode = event.value}
+        return zipcode
 }
 
 def trafficurl = "http://local.yahooapis.com/MapsService/V1"
@@ -37,7 +24,7 @@ def appid = "KgtDvNrV34Eavq_dUF81vBlVLKAOq7o1tj7Tzvu_kYbKsCtBW190VmrvVHK_0w--"
 
 say( "Welcome to the Tropo Traffic System, brought to you by Yahoo Local!")
 
-say(",,,Please enter the 5 digit zip code for which you would like to hear traffic alerts")
+say("Please enter the 5 digit zip code for which you would like to hear traffic alerts")
 
 def zipcode = getZipCode()
 // def zipcode = "32801" // Downtown Orlando
@@ -51,13 +38,15 @@ def trafficxml = new XmlSlurper().parseText( "${trafficurl}/trafficData?appid=${
 
 def incidentCount = trafficxml.Result.size()
 
+def verb=" are "; def results=" results "
 if (incidentCount == 0) {incidentCount="no"}
+if (incidentCount == 1) {verb=" is ";results= " result "}
 
-say(", There are " + incidentCount + " results for your zip code!")
+say("There" + verb + incidentCount + results + "for your zip code!")
 
 def count = 1
 
-trafficxml.Result.each { result -> say(",,Item " + count++ + "!, " + result.Title.text() + ", " + result.Description.text())}
+trafficxml.Result.each { result -> say("Item " + count++ + ": " + result.Title.text() + ", " + result.Description.text())}
 
 say("That completes your traffic report for zipcode " + asDigits(zipcode) + ". Goodbye!") 
 
