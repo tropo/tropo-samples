@@ -1,12 +1,5 @@
 import java.math.*
 
-/* Debug Stubs for Tropo primitives
-def say(instr) {println instr}
-def answer() {println ">>> [answering phone] <<<"}
-def ask(instr,args) {println instr; println args}
-def hangup() {println ">>> [hanging up] <<<"}
-*/
-
 answer()
 
 precision = new MathContext(3) 
@@ -25,53 +18,36 @@ def calcIdealWeight(heightInM,idealBMIndex)
     
 def getWeightInLB() {
     def weightInLB = ''
-    def bDone  = false
-    while (!bDone) {
-        event = ask("",[choices:"0,1,2,3,4,5,6,7,8,9",timeout:2])
+    event = ask("",[choices:"[2-3 DIGITS]"])
         if (event.name=="choice") {
-                 weightInLB += event.value
-            } else {    
-                 if (weightInLB.length() >= 2) {bDone = true} else {
-                      if (event.name=="timeout") {say "please enter a number!"}
-                 }
+                 weightInLB = event.value
             } 
-        if (weightInLB.length() >= 3) {bDone = true}
-    }
-    say "Thank you! You weigh: " + weightInLB + "pounds."
+    say "Thank you! You weigh " + weightInLB + " pounds."
     return weightInLB
 }
   
 def getHeightInInches() {
     def HeightInInches = ''
-    def bDone  = false
-    while (!bDone) {
-        event = ask( "",[choices:"1,2,3,4,5,6,7,8,9,0",timeout:2])
-        if (event.name=="choice") {
-                HeightInInches += event.value
-            } else {    
-                if (HeightInInches.length() >= 2) {bDone = true} else {
-                      if (event.name=="timeout") {say "please enter a number!"}
-                 }
-            }
-        if (HeightInInches.length() == 3) {bDone = true}
-    }
-    say "Thank you! You are: " + HeightInInches + "inches tall."
+    response = ask( "",[choices:"[2 DIGITS]"])
+        if (response.name=="choice") {
+                HeightInInches = response.value
+            } 
+    say "Thank you! You are " + HeightInInches + " inches tall."
     return HeightInInches
 }  
 
-
-say ("Welcome to the Tropo Body Mass Index calculator!  To get started, please enter your weight in pounds!")
+say ("Welcome to the Tropo Body Mass Index calculator!  To get started, please enter your weight in pounds...")
 
 def weightInLB = getWeightInLB()
-// def weightInLB = "300"; say ("Weight in pounds: " + weightInLB)
+//def weightInLB = "300"; say ("Weight in pounds: " + weightInLB)
 
-say ("Now enter your height in inches, followed by the pound sign.")
+say ("Now enter your height in inches:")
 
 def heightInInches = getHeightInInches()
 // def heightInInches = 76; say ("Height in inches: " + heightInInches)
 
 def heightInM = ((heightInInches as int) * 0.0254)
-// say ("Height in meters:" + heightInM.round(precision))
+// say ("Height in meters:" + heightInM)
 
 def weightInKG = ((weightInLB as int) * 0.4535924)
 // say ("Weight in KG: " + weightInKG.round(precision))
