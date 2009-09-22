@@ -10,5 +10,5 @@ if ($currentCall->callerID == "4075551111")
 	hangup();
 	}
  else
-    redirect( "14129272341");
+    redirect( "tel:+14129272341");
 ?>

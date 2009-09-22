@@ -10,4 +10,4 @@ if (currentCall.callerID == '4075551111')
 	hangup();
 }
 else
-    redirect( "14075552222");
+    redirect( "tel:+14075552222");

@@ -7,5 +7,5 @@ if $currentCall.callerID == '4075551212'
   say 'Hello there and goodbye'
   hangup
 else
-  redirect '14075551212'
+  redirect 'tel:+14075551212'
 end

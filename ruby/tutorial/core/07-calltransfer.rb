@@ -13,10 +13,10 @@ if result.name == 'choice'
   case result.value
   when 'sales'
     say 'Ok, let me transfer you to sales.'
-		transfer '14129272358'
+		transfer 'tel:+14129272358'
   when 'support'
     say 'Sure, let me get support.  Please hold.'
-		transfer '14129272341'
+		transfer 'tel:+14129272341'
   end
 end
 

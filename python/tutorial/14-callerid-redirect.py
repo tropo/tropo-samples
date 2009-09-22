@@ -8,5 +8,5 @@ if (currentCall.callerID == '4075551111'):
     say("Hello, world!")
     hangup()
 else:
-    redirect("14075552222")
+    redirect("tel:+14075552222")
 
