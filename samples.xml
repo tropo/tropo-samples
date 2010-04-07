@@ -8,9 +8,9 @@
   </application>
   <application name="PHP - Local Search" type="PHP" url="http://github.com/voxeo/tropo-samples/raw/master/php/localsearch.php">
     <![CDATA[
-      The localsearch demo is a multi-modal application. One code base working with voice, IM, and SMS, each with a UI that is appropriate for the medium.
-      The application connects to Yahoo Local Search, asks for a zip code and a search term, then gives you a list of search results. For voice, a grammar of restaurant types is used. For text channels, a free-form text grammar allows any search term.
-      The search results are formatted in an appropriate manner for the channel the user is on.
+      <p>The local-search demo is a multi-modal application. One code base working with voice, IM, and SMS, each with a UI that is appropriate for the medium.</p>
+      <p>The application connects to Yahoo Local Search, asks for a zip code and a search term, then gives you a list of search results. For voice, a grammar of restaurant types is used. For text channels, a free-form text grammar allows any search term.</p>
+      <p>The search results are formatted in an appropriate manner for the channel the user is on.</p>
       On voice, a menu of matches is provided. Pick one of them and it gives you the phone number and then transfers your call to that restaurant.
       Over text channels, the name, phone number, and address of each result is provided. With IM, a link to the Yahoo Local page is also provided.
       Also demonstrated is changing timeout intervals and other parameters based on the channel, as well as detecting that the initial text sent to the text channel matches the grammar and skipping the zip code prompt if it does.
