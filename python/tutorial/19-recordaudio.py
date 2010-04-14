@@ -5,7 +5,7 @@
 answer();
 
 # record a message.  Play the beep, caller must speak within 10 seconds.  
-# Allow 7 seconds of silence and up to 60 seconds of recording.
+# Allow 7 seconds of silence and up to 60 seconds of recording..
 
 result = record( "Hello.  Thanks for calling.  Leave your message at the beep.",
                  { 'beep' : True, 'timeout' : 10, 'silenceTimeout' : 7, 'maxTime' : 60 })
