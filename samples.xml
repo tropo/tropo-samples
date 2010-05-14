@@ -1,0 +1,24 @@
+<applications>
+  <application name="Groovy - Traffic Report" type="Groovy" url="http://github.com/voxeo/tropo-samples/raw/master/groovy/traffic.groovy">
+    <![CDATA[
+      <p style='font-size:11px;'>Simple Tropo mashup which allows the caller to enter a zipcode and hear a list of traffic incidents provided by Yahoo! Local.</p>
+      <p style='font-size:11px;'>The caller is prompted for their zipcode and the XmlSlurper function is used to retrieve a list of incidents using the Yahoo! Local api and then speak them back to the caller. That's it!</p>
+      <p style='font-size:11px;'>Note that an appid should be obtained here and inserted into the sample where indicated below within the source.</p>
+    ]]>
+  </application>
+  <application name="PHP - Local Search" type="PHP" url="http://github.com/voxeo/tropo-samples/raw/master/php/localsearch.php">
+    <![CDATA[
+      <p style='font-size:11px;'>The local-search demo is a multi-modal application. One code base working with voice, IM, and SMS, each with a UI that is appropriate for the medium.</p>
+      <p style='font-size:11px;'>The application connects to Yahoo Local Search, asks for a zip code and a search term, then gives you a list of search results. For voice, a grammar of restaurant types is used. For text channels, a free-form text grammar allows any search term.</p>
+      <p style='font-size:11px;'>The search results are formatted in an appropriate manner for the channel the user is on.</p>
+      <p  style='font-size:11px;'>On voice, a menu of matches is provided. Pick one of them and it gives you the phone number and then transfers your call to that restaurant.</p>
+      <p style='font-size:11px;'>Over text channels, the name, phone number, and address of each result is provided. With IM, a link to the Yahoo Local page is also provided.</p>
+      <p style='font-size:11px;'>Also demonstrated is changing timeout intervals and other parameters based on the channel, as well as detecting that the initial text sent to the text channel matches the grammar and skipping the zip code prompt if it does.</p>
+    ]]>
+  </application>
+  <application name="Python - Pizza Order" type="Python" url="http://github.com/voxeo/tropo-samples/raw/master/python/orderpizza.py">
+    <![CDATA[
+      <p style='font-size:11px;'>Put together your perfect pizza order with this voice driven application.</p>
+    ]]>
+  </application>
+</applications>

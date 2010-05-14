@@ -3,11 +3,6 @@
 # See http://www.tropo.com for more info
 # --------------------------------------------
 
-# =============================
-# THIS APP NEEDS TO BE VERIFIED
-# Ported from JavaScript, but not verified to work
-# =============================
-
 answer()
 
 result = ask("Hi. For sales, say sales or press 1. For support, say support or press 2", 
