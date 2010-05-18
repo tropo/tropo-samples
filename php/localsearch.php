@@ -158,7 +158,7 @@ function print_results_voice($results) {
     $dial = str_replace(' ','',$dial);
     $dial = str_replace('-','',$dial);
     $dial = str_replace('+','',$dial);
-    transfer(preg_replace('[^0-9]','',$number[$event->value]));
+    transfer('tel:+1'.preg_replace('[^0-9]','',$number[$event->value]));
   }
 }
 ?>
