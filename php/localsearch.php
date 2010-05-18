@@ -25,10 +25,10 @@ $zip = '';
 $event = ask($initialPrompt,
             			array (
             			  "choices" => '[5 DIGITS]',
+            			  'voice' => 'allison',
             			  "timeout" => $timeout,
             			  "repeat" => $repeat,
             			  "onChoice" => create_function('$event','onzip($event->value)'),
-            			  'voice' => 'allison'
             			) 
             		 );  
 hangup();
@@ -158,7 +158,7 @@ function print_results_voice($results) {
     $dial = str_replace(' ','',$dial);
     $dial = str_replace('-','',$dial);
     $dial = str_replace('+','',$dial);
-    transfer('tel:+1'.preg_replace('[^0-9]','',$number[$event->value]));
+    transfer('tel:+1'.preg_replace('[^0-9]','',$dial));
   }
 }
 ?>
