@@ -25,8 +25,8 @@ $zip = '';
 $event = ask($initialPrompt,
             			array (
             			  "choices" => '[5 DIGITS]',
-            			  "timeout" => 30,
-            			  "repeat" => 3,
+            			  "timeout" => $timeout,
+            			  "repeat" => $repeat,
             			  "onChoice" => create_function('$event','onzip($event->value)'),
             			  'voice' => 'allison'
             			) 
