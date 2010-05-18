@@ -3,6 +3,7 @@ answer(30);
 
 $channel = $currentCall->channel;
 $network = $currentCall->network;
+$callerid = $currentCall->callerID;
 
 if ($channel == 'TEXT') {
   $initialPrompt = 'What is your zip code?';
@@ -21,12 +22,13 @@ if ($channel == 'TEXT') {
 }
 $zip = '';
 
-$event = prompt($initialPrompt,
+$event = ask($initialPrompt,
             			array (
             			  "choices" => '[5 DIGITS]',
             			  "timeout" => 30,
             			  "repeat" => 3,
             			  "onChoice" => create_function('$event','onzip($event->value)'),
+            			  'voice' => 'allison'
             			) 
             		 );  
 hangup();
@@ -76,9 +78,10 @@ function onzip($zipcode) {
   } else {
     $sayZip = "<say-as interpret-as='vxml:digits'>$zip</say-as>";
   }
-  $event = prompt("<speak>What are you looking for in $sayZip?</speak>",
+  $event = ask("<speak>What are you looking for in $sayZip?</speak>",
                 			array (
                 			  "choices" => $categories,
+                			  'voice' => 'allison',
                 			  "onChoice" => create_function('$event','onCategory($event->value);'),
                 			) 
   		            );
@@ -86,7 +89,7 @@ function onzip($zipcode) {
 
 function print_results($results, $channel, $network) {
   if (!is_array($results)) {
-    say('No results found. Try another search.');
+    say('No results found. Try another search.',array('voice' => 'allison'));
     return;
   }
   if ($channel == 'TEXT') {
@@ -127,12 +130,14 @@ function print_results_sms($results) {
 
 
 function print_results_voice($results) {
+  global $callerid;
   $i = 1;
   foreach ($results as $location) {
     $title = str_replace(' & ', ' and ', $location['Title']);
     $choices .= 'press '. $i .' for '. $title .', ';
     $number[$i] = $location['Phone'];
     $name[$i] = $title;
+    $address[$i] = $location['Address'];
     $i++;
   }
   $event = prompt($choices,
@@ -141,7 +146,13 @@ function print_results_voice($results) {
   			) 
   		 );
   if ($event->name == 'choice') {
-    say('Connecting you to '. $name[$event->value] .' at '. $number[$event->value] .'. Please hold.');
+    $message = 'Thanks for using Tropo.com Local Search. - <br/>' . "\n" . $name[$event->value] . ' - ' . $address[$event->value] . ' - ' . $number[$event->value];
+    $outbound = message($message, array(
+            'to'=>'1' . $callerid,
+            'network' => 'SMS',
+            'voice' => 'allison'
+            ));
+    say('Connecting you to '. $name[$event->value] .' at '. $number[$event->value] .'. Please hold.', array('voice' => 'allison'));
     $dial = str_replace('(','',$number[$event->value]);
     $dial = str_replace(')','',$dial);
     $dial = str_replace(' ','',$dial);
