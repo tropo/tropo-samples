@@ -51,14 +51,14 @@ currentCall.calledName)
         print("Disconnected by the peer!<<<<<<<<<<<<<<<<<");
     },
     onError: function() {
-        say("You've get an error!");
+        say("You have an error!");
     },
     onEvent: function(event) {
         if (event.name != "hangup") {
             say("inner callback got triggered by event " + event.name);
         }
         event.onError(function() {
-            say("You've got an error! ")
+            say("You have an error! ")
         });
         event.onTimeout(function() {
             say("wait input time out")
@@ -89,10 +89,10 @@ currentCall.calledName)
 );
 
 if (event.name != "hangup") {
-    say("run outter call back for event [" + event.name + "," + event.value
+    say("run outer call back for event [" + event.name + "," + event.value
     + "]");
     event.onError(function() {
-        say("You've got an error! ")
+        say("You have an error! ")
     });
     event.onTimeout(function() {
         say("wait input time out")
