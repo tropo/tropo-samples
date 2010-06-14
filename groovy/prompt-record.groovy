@@ -21,10 +21,10 @@ def event=prompt("http://127.0.0.1:8080/beep.wav where are you heading?",
     onBadChoice: { say("I can not recognize you. Please input again."); }, 
     onTimeout: { say("wait input time out"); }, 
     onHangup: { print("Disconnected by the peer!<<<<<<<<<<<<<<<<<"); }, 
-    onError: { say("You've get an error!"); },
+    onError: { say("You have an error!"); },
     onEvent: {event->
       if(event.name!="hangup"){ say("inner callback got triggered by event " + event.name);}
-      event.onError( { say("000You've got an error err! ") } );
+      event.onError( { say("000You have an error err! ") } );
       event.onTimeout( { say("000Wait input time out") } );
       event.onHangup( { print("000Discnnected by the peer!<<<<<<<<<<<<<<<<<") } );
       event.onChoice( "1st Floor", { say("Your destination is 1st Floor") } );
@@ -38,7 +38,7 @@ def event=prompt("http://127.0.0.1:8080/beep.wav where are you heading?",
 
 if(event.name!="hangup"){
   say("run outer call back for event [" + event.name +"," + event.value +"]");
-  event.onError( { say("You've got an error err! ") } );
+  event.onError( { say("You have an error err! ") } );
   event.onTimeout( { say("wait input time out") } );
   event.onChoice( "1st Floor", { say("Your destination is 1st Floor") } );
   event.onChoice( "2nd Floor", { say("Your destination is 2nd Floor") } );
