@@ -250,7 +250,7 @@ String presentFeeds( GReaderState state )
 		refreshFeeds( state )
 			
 		if (state.gFeedsMenu.size() == 0) {
-			say( "There is no unread items left. Good bye.")
+			say( "There are no unread items left. Good bye.")
 			return "Main menu"
 		}
 		
