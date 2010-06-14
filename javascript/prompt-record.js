@@ -11,8 +11,8 @@ answer()
 
  log("Incoming call info [state:" + currentCall.state() +
 ",callerID:" + currentCall.callerID + ",calledID:" + currentCall.calledID +
-",callerName:" + currentCall.callerName + ",calleeName:" +
-currentCall.calleeId)
+",callerName:" + currentCall.callerName + ",calledName:" +
+currentCall.calledName)
 //var event=record("please say something");
  var event = prompt("http://127.0.0.1:8080/beep.wav where are you heading?",
 {
@@ -119,5 +119,5 @@ if (event.name != "hangup") {
     hangup()
 }
  else {
-    print(">>>>>>>>>>>>>>>Discnnected by the peer!<<<<<<<<<<<<<<<<<");
+    print(">>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<");
 }
