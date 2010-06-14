@@ -26,7 +26,7 @@ def event=prompt("http://127.0.0.1:8080/beep.wav where are you heading?",
       if(event.name!="hangup"){ say("inner callback got triggered by event " + event.name);}
       event.onError( { say("000You have an error err! ") } );
       event.onTimeout( { say("000Wait input time out") } );
-      event.onHangup( { print("000Discnnected by the peer!<<<<<<<<<<<<<<<<<") } );
+      event.onHangup( { print("000Disconnected by the peer!<<<<<<<<<<<<<<<<<") } );
       event.onChoice( "1st Floor", { say("Your destination is 1st Floor") } );
       event.onChoice( "2nd Floor", { say("Your destination is 2nd Floor") } );
       event.onChoice( "3rd Floor", { say("Your destination is 3rd Floor") } ); 
