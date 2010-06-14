@@ -7,8 +7,7 @@ answer()
 
 await(1000) // wait for 1 second. PLEASE USE await in Groovy
 log("This is a log demo")
-// currentCall.calleeId, currentCall.calleeID don't work
-currentCall.log("Incoming call info [state:" + currentCall.state() + ", callerID:" + currentCall.callerID + ", callerName:" + currentCall.callerName + "]")
+log("Incoming call info [state:" + currentCall.state() + ", callerID:" + currentCall.callerID + ", callerName:" + currentCall.callerName + "]")
 
 def event=prompt("http://127.0.0.1:8080/beep.wav where are you heading?",
    [repeat:3,record:true, beep:true, silenceTimeout: 3, maxTime:30,timeout:20.03456789,
@@ -50,6 +49,6 @@ if(event.name!="hangup"){
   hangup()
 }
 else{
-  print(">>>>>>>>>>>>>>>Discnnected by the peer!<<<<<<<<<<<<<<<<<");
+  print(">>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<");
 }
 
