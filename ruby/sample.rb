@@ -9,11 +9,11 @@ event=prompt("where are you heading?",
       event.onBadChoice( lambda { say "I can not recognize you. Please input again. " } ) 
     }, 
     'onTimeout'=>lambda { say "wait input time out" }, 
-    'onHangup'=>lambda { puts ">>>>>>>>>>>>>>>>>>>Discnnected by the peer!<<<<<<<<<<<<<<<<<" },
-    'onError'=>lambda { say "You've got an error!" },
+    'onHangup'=>lambda { puts ">>>>>>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<" },
+    'onError'=>lambda { say "You have an error!" },
     'onEvent'=>lambda { | event |
       say "inner callback got triggered by event " + event.name if event.name!="hangup"
-      event.onError( lambda { say "You've got an error err! " } )
+      event.onError( lambda { say "You have an error! " } )
       event.onTimeout( lambda { say "wait input time out" } )
       event.onHangup( lambda { puts ">>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<" } )
       event.onChoice( "1st Floor", lambda { say "Your destination is 1st Floor" } )
@@ -26,8 +26,8 @@ event=prompt("where are you heading?",
 
 if event.name!="hangup"
   say "run outter call back for event [#{event.name},#{event.value}]"
-  event.onError( lambda { say "You've got an error! " } )
-  event.onChoice( "1st Floor", lambda { say "our destination is 1st Floor" } )
+  event.onError( lambda { say "You have an error! " } )
+  event.onChoice( "1st Floor", lambda { say "Your destination is 1st Floor" } )
   event.onChoice( "2nd Floor", lambda { say "Your destination is 2nd Floor" } )
   event.onChoice( "3rd Floor", lambda { say "Your destination is 3rd Floor" } ) 
   event.onBadChoice( lambda { say "I can not recognize you " } ) 
