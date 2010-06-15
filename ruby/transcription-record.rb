@@ -13,5 +13,5 @@ event = record('Say something after the beep.',
                  :transcriptionID     => '123456' })
 
 log 'Recorded file: ' + event.recordURI
-say 'Thanks for your testing ruby on Tropo platform'
+say 'Thanks for testing ruby on the Tropo platform'
 hangup
