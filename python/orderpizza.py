@@ -16,7 +16,7 @@ say("Welcome at Alfredos's Pizza Network.")
 wait(500)
 say("Please choose your size first, then the toppings.")
 
-result = ask("We offer small, medium and family size pizza. Which size do you like?",
+result = ask("We offer small, medium and family size pizzas. Which size would you like?",
 {'choices':"small,1,medium,2,family,3,large", 'repeat':3})
 
 if (result.name == 'choice'):
@@ -25,12 +25,12 @@ if (result.name == 'choice'):
     elif (result.value == "medium")or (result.value == "2"): 
         say("I'll fix a Medium pizza for you")
     elif (result.value == "family") or (result.value == "large")or (result.value == "3"):
-        say("A family pizza.")
+        say("A family sized pizza, no problem.")
 #    else:
-#        say("Please choose between small, medium and familiy size")
+#        say("Please choose between small, medium and family size")
 
-say("Which toppings you would like to have?")
-say("Please add one topping at a time. You will get back to the topping choice unless you say done")
+say("Which toppings would you like?")
+say("Please add one topping at a time. You will return to the topping selection menu unless you say done")
 
 
 
@@ -119,7 +119,7 @@ sayToppings(meattoppings)
 
 say("Please provide your address now")
 
-#add delivery address getting by recording here
+#add delivery address recording here
 
 #tell the caller when to expect the pizza
 deliverytime = str((len(veggietoppings) + len(meattoppings))*2) 
