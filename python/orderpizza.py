@@ -34,7 +34,7 @@ say("Please add one topping at a time. You will return to the topping selection 
 
 
 
-say("Let us start with the vegetarian choices")
+say("Let's start with the vegetarian choices")
 
 veggietoppings = []
 exit = False
