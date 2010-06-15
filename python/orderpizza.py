@@ -1,4 +1,3 @@
-
 #Order a pizza with different toppings
 
 
@@ -70,7 +69,7 @@ while(exit == False):
             veggietoppings.append("corn")
             say("Adding corn")
         elif (result.value == "done")or (result.value == "9"): 
-            say("So we do have the following toppings so far:")
+            say("So we have the following toppings so far:")
             sayToppings(veggietoppings)
             exit = True
     if exit:
@@ -102,7 +101,7 @@ while(exit == False):
 #        elif (result.value == "corn")or (result.value == "5"): 
 #            veggietoppings.append("corn")
         elif (result.value == "done")or (result.value == "9"): 
-            say("So we do have the following toppings so far:")
+            say("So we have the following toppings so far:")
             sayToppings(meattoppings)
             exit = True
     if exit:
@@ -113,7 +112,7 @@ while(exit == False):
             elif (result2.value == "onions") or (result2.value == "2"): 
                 exit = True
                     
-say("I do have the following toppings for your pizza now")
+say("I have the following toppings for your pizza")
 sayToppings(veggietoppings)
 say("and")
 sayToppings(meattoppings)
