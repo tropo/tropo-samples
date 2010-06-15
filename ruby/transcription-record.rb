@@ -1,5 +1,5 @@
 answer
-say 'Welcome to ruby recording test'
+say 'Welcome to the Ruby recording test'
 
 event = record('Say something after the beep.',
                { :repeat              => 0, 
@@ -13,5 +13,5 @@ event = record('Say something after the beep.',
                  :transcriptionID     => '123456' })
 
 log 'Recorded file: ' + event.recordURI
-say 'Thanks for testing ruby on the Tropo platform'
+say 'Thanks for testing Ruby on the Tropo platform'
 hangup
