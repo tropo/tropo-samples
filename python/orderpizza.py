@@ -36,16 +36,6 @@ say("Please add one topping at a time. You will return to the topping selection 
 
 say("Let us start with the vegetarian choices")
 
-##This part should be used to place the while construct into a function.
-##Skipped for timing consideration ... (bad!) 
-#veggie = ("peppers", "onions", "jalapenos", "mushrooms", "corn")
-##build Prompt
-#prompt = "Choose between"
-#for choice in choicelist:
-#    prompt += choice
-#    prompt += ", "
-#prompt +=  "To finish say done or press 9"
-
 veggietoppings = []
 exit = False
 while(exit == False):
