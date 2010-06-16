@@ -26,7 +26,7 @@ currentCall.calledName)
     onRecord: function(event) {
         say("you said " + event.recordURI);
     },
-    choices: "1st Floor (first, house wares, 1),\n 2nd Floor (second, bed and bath, 2),\n 3rd Floor (third, sporting goods, 3)",
+    choices: "1st Floor (first, house wares, 1), 2nd Floor (second, bed and bath, 2), 3rd Floor (third, sporting goods, 3)",
     onChoice: function(event) {
         event.onChoice("1st Floor",
         function() {
@@ -48,7 +48,7 @@ currentCall.calledName)
         say("wait input time out");
     },
     onHangup: function() {
-        print("Disconnected by the peer!<<<<<<<<<<<<<<<<<");
+        print(">>>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<");
     },
     onError: function() {
         say("You have an error!");
@@ -64,7 +64,7 @@ currentCall.calledName)
             say("wait input time out")
         });
         event.onHangup(function() {
-            print("Disconnected by the peer!<<<<<<<<<<<<<<<<<")
+            print(">>>>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<")
         });
         event.onChoice("1st Floor",
         function() {
