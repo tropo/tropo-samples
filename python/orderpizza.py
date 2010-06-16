@@ -38,7 +38,9 @@ say("Let's start with the vegetarian choices")
 
 veggietoppings = []
 exit = False
+cnt = 0
 while(exit == False):
+    cnt += 1
     result = ask("Choose between peppers, onions, jalapenos, mushrooms, corn. To finish say done or press 9",
     {'choices':"peppers, 1, onions, 2, jalapenos, 3, mushrooms, 4, corn, 4, done, 9", 'repeat':1})
     
@@ -62,6 +64,8 @@ while(exit == False):
             say("So we have the following toppings so far:")
             sayToppings(veggietoppings)
             exit = True
+    if (cnt == 3):
+	        exit = True
     if exit:
         result2 = ask("Do you want to add more toppings?", {'choices':"yes(1,yes), no(2,no)", 'repeat':2})
         if (result2.name == 'choice'):
@@ -72,7 +76,9 @@ while(exit == False):
 say("And now the other ones")        
 meattoppings = []
 exit = False
+cnt = 0
 while(exit == False):
+    cnt += 1
     result = ask("Choose between pepperoni, ham, bacon. To finish say done or press 9",
     {'choices':"pepperoni, 1, ham, 2, bacon, 3, done, 9", 'repeat':3})
     
@@ -93,6 +99,8 @@ while(exit == False):
         elif (result.value == "done")or (result.value == "9"): 
             say("So we have the following toppings so far:")
             sayToppings(meattoppings)
+            exit = True
+    if (cnt == 3):
             exit = True
     if exit:
         result2 = ask("Do you want to add more toppings?", {'choices':"yes(1,yes), no(2,no)", 'repeat':2})
