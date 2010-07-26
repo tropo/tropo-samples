@@ -13,7 +13,7 @@ var base_url = "http://YOUR.SERVER"
 answer();
 wait(1500);
 
-log("Incoming call info: callerID:" + currentCall.callerID + ", calledID:" + currentCall.calledID +", callerName:" + currentCall.callerName + ", calledName:" + currentCall.calledName);
+log("Incoming call info: callerID:" + currentCall.callerId + ", calledID:" + currentCall.calledId +", callerName:" + currentCall.callerName + ", calledName:" + currentCall.calledName);
 
 var event = record("Please leave your message after the tone.",
 {  // RECORD VARIABLES
