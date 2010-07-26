@@ -1,7 +1,16 @@
 // --------------------------------------------
 // Example showing recording and transcription by @Skram
+
+//  This example utilizes two additional samples to create a complete application:
+
+// Review http://github.com/voxeo/tropo-audiofiles-to-s3>tropo-audiofiles-to-s3, which is applied when the application references "/post_audio_to_s3?filename=".
+
+// Review http://labs.voxeo.com/2009/08/27/posting-tropo-transcriptions-to-google-appengine/, which is applied when the application references "/receive_transcription".
+
 // See http://www.tropo.com for more info
 // --------------------------------------------
+
+
 
 // CALL VARIABLES
 date = new Date();
