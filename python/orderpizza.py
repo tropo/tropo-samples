@@ -1,4 +1,3 @@
-
 #Order a pizza with different toppings
 
 
@@ -17,7 +16,7 @@ say("Welcome at Alfredos's Pizza Network.")
 wait(500)
 say("Please choose your size first, then the toppings.")
 
-result = ask("We offer small, medium and family size pizza. Which size do you like?",
+result = ask("We offer small, medium and family size pizzas. Which size would you like?",
 {'choices':"small,1,medium,2,family,3,large", 'repeat':3})
 
 if (result.name == 'choice'):
@@ -26,30 +25,22 @@ if (result.name == 'choice'):
     elif (result.value == "medium")or (result.value == "2"): 
         say("I'll fix a Medium pizza for you")
     elif (result.value == "family") or (result.value == "large")or (result.value == "3"):
-        say("A family pizza.")
+        say("A family sized pizza, no problem.")
 #    else:
-#        say("Please choose between small, medium and familiy size")
+#        say("Please choose between small, medium and family size")
 
-say("Which toppings you would like to have?")
-say("Please add one topping at a time. You will get back to the topping choice unless you say done")
+say("Which toppings would you like?")
+say("Please add one topping at a time. You will return to the topping selection menu unless you say done")
 
 
 
-say("Let us start with the vegetarian choices")
-
-##This part should be used to place the while construct into a function.
-##Skipped for timing consideration ... (bad!) 
-#veggie = ("peppers", "onions", "jalapenos", "mushrooms", "corn")
-##build Prompt
-#prompt = "Choose between"
-#for choice in choicelist:
-#    prompt += choice
-#    prompt += ", "
-#prompt +=  "To finish say done or press 9"
+say("Let's start with the vegetarian choices")
 
 veggietoppings = []
 exit = False
+cnt = 0
 while(exit == False):
+    cnt += 1
     result = ask("Choose between peppers, onions, jalapenos, mushrooms, corn. To finish say done or press 9",
     {'choices':"peppers, 1, onions, 2, jalapenos, 3, mushrooms, 4, corn, 4, done, 9", 'repeat':1})
     
@@ -70,9 +61,11 @@ while(exit == False):
             veggietoppings.append("corn")
             say("Adding corn")
         elif (result.value == "done")or (result.value == "9"): 
-            say("So we do have the following toppings so far:")
+            say("So we have the following toppings so far:")
             sayToppings(veggietoppings)
             exit = True
+    if (cnt == 3):
+	        exit = True
     if exit:
         result2 = ask("Do you want to add more toppings?", {'choices':"yes(1,yes), no(2,no)", 'repeat':2})
         if (result2.name == 'choice'):
@@ -83,7 +76,9 @@ while(exit == False):
 say("And now the other ones")        
 meattoppings = []
 exit = False
+cnt = 0
 while(exit == False):
+    cnt += 1
     result = ask("Choose between pepperoni, ham, bacon. To finish say done or press 9",
     {'choices':"pepperoni, 1, ham, 2, bacon, 3, done, 9", 'repeat':3})
     
@@ -102,8 +97,10 @@ while(exit == False):
 #        elif (result.value == "corn")or (result.value == "5"): 
 #            veggietoppings.append("corn")
         elif (result.value == "done")or (result.value == "9"): 
-            say("So we do have the following toppings so far:")
+            say("So we have the following toppings so far:")
             sayToppings(meattoppings)
+            exit = True
+    if (cnt == 3):
             exit = True
     if exit:
         result2 = ask("Do you want to add more toppings?", {'choices':"yes(1,yes), no(2,no)", 'repeat':2})
@@ -113,14 +110,14 @@ while(exit == False):
             elif (result2.value == "onions") or (result2.value == "2"): 
                 exit = True
                     
-say("I do have the following toppings for your pizza now")
+say("I have the following toppings for your pizza")
 sayToppings(veggietoppings)
 say("and")
 sayToppings(meattoppings)
 
 say("Please provide your address now")
 
-#add delivery address getting by recording here
+#add delivery address recording here
 
 #tell the caller when to expect the pizza
 deliverytime = str((len(veggietoppings) + len(meattoppings))*2) 

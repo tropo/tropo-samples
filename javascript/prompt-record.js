@@ -11,8 +11,8 @@ answer()
 
  log("Incoming call info [state:" + currentCall.state() +
 ",callerID:" + currentCall.callerID + ",calledID:" + currentCall.calledID +
-",callerName:" + currentCall.callerName + ",calleeName:" +
-currentCall.calleeId)
+",callerName:" + currentCall.callerName + ",calledName:" +
+currentCall.calledName)
 //var event=record("please say something");
  var event = prompt("http://127.0.0.1:8080/beep.wav where are you heading?",
 {
@@ -26,7 +26,7 @@ currentCall.calleeId)
     onRecord: function(event) {
         say("you said " + event.recordURI);
     },
-    choices: "1st Floor (first, house wares, 1),\n 2nd Floor (second, bed and bath, 2),\n 3rd Floor (third, sporting goods, 3)",
+    choices: "1st Floor (first, house wares, 1), 2nd Floor (second, bed and bath, 2), 3rd Floor (third, sporting goods, 3)",
     onChoice: function(event) {
         event.onChoice("1st Floor",
         function() {
@@ -48,23 +48,23 @@ currentCall.calleeId)
         say("wait input time out");
     },
     onHangup: function() {
-        print("Disconnected by the peer!<<<<<<<<<<<<<<<<<");
+        print(">>>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<");
     },
     onError: function() {
-        say("You've get an error!");
+        say("You have an error!");
     },
     onEvent: function(event) {
         if (event.name != "hangup") {
             say("inner callback got triggered by event " + event.name);
         }
         event.onError(function() {
-            say("You've got an error! ")
+            say("You have an error! ")
         });
         event.onTimeout(function() {
             say("wait input time out")
         });
         event.onHangup(function() {
-            print("Disconnected by the peer!<<<<<<<<<<<<<<<<<")
+            print(">>>>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<")
         });
         event.onChoice("1st Floor",
         function() {
@@ -89,10 +89,10 @@ currentCall.calleeId)
 );
 
 if (event.name != "hangup") {
-    say("run outter call back for event [" + event.name + "," + event.value
+    say("run outer call back for event [" + event.name + "," + event.value
     + "]");
     event.onError(function() {
-        say("You've got an error! ")
+        say("You have an error! ")
     });
     event.onTimeout(function() {
         say("wait input time out")
@@ -119,5 +119,5 @@ if (event.name != "hangup") {
     hangup()
 }
  else {
-    print(">>>>>>>>>>>>>>>Discnnected by the peer!<<<<<<<<<<<<<<<<<");
+    print(">>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<");
 }

@@ -13,13 +13,13 @@ def event=prompt('where are you heading?',
      event.onBadChoice( { say('I can not recognize you. Please input again. ') } ) 
      }, 
      onTimeout: { say('wait input time out') }, 
-     onError: { say('You"ve got an error!') },
+     onError: { say('You have an error!') },
      onHangup: { println ">>>>>>>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<" },
      onEvent: { event->
      if (event.name!="hangup"){ say('inner generic callback got triggered by event ' + event.name)}
-     event.onError( { say('000You"ve got an error err! ') } )
+     event.onError( { say('000You have an error err! ') } )
      event.onTimeout( { say('000wait input time out') } )
-     event.onHangup( { println ">>>>>>>>>>>>>>>>Discnnected by the peer!<<<<<<<<<<<<<<<<<" } )
+     event.onHangup( { println ">>>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<" } )
      event.onChoice( '1st Floor', { say('Your destination is 1st Floor') } )
      event.onChoice( '2nd Floor', { say('Your destination is 2nd Floor') } )
      event.onChoice( '3rd Floor', { say('Your destination is 3rd Floor') } )
@@ -30,7 +30,7 @@ def event=prompt('where are you heading?',
 
 if (event.name!="hangup"){ 
   say('outer callback got called for event [' + event.name +',' + event.value +']')
-  event.onError( { say('111You"ve got an error err! ') } )
+  event.onError( { say('111You have an error err! ') } )
   event.onTimeout( { say('111wait input time out') } )
   event.onChoice( '1st Floor', { say('Your destination is 1st Floor') } )
   event.onChoice( '2nd Floor', { say('Your destination is 2nd Floor') } )
@@ -42,5 +42,5 @@ if (event.name!="hangup"){
   hangup()
 }
 else{
-  println ">>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<"
+  print(">>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<")
 }

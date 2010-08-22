@@ -14,7 +14,7 @@ zipcode_options = { :choices     => "[5 DIGITS]",
                     :onBadChoice => lambda { say 'Invalid entry, please try again.' },
                     :onTimeout   => lambda { say 'Timeout, please try again.' },
                     :onChoice    => lambda { |zip_code_choice|
-                      search_options = { :choices     => "indian('indian'), pizza('pizza', 'pizzareia'), mexican('mexican'), chinese('chinese')",
+                      search_options = { :choices     => "indian('indian'), pizza('pizza', 'pizzeria'), mexican('mexican'), chinese('chinese')",
                                          :repeat      => 3,
                                          :onBadChoice => lambda { say 'Invalid entry, please try again.' },
                                          :onTimeout   => lambda { say 'Timeout, please try again.' },

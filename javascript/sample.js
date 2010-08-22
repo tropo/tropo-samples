@@ -15,10 +15,10 @@ var event=prompt("where are you heading?",
     }, 
     onTimeout: function() { say("wait input time out"); }, 
     onHangup: function() { print(">>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<"); }, 
-    onError: function() { say("You've got an error!"); },
+    onError: function() { say("You have an error!"); },
     onEvent: function(event) {
       if(event.name!="hangup"){ say("inner callback got triggered by event " + event.name);}
-      event.onError( function() { say("You've got an error err! ") } );
+      event.onError( function() { say("You have an error err! ") } );
       event.onTimeout( function() { say("wait input time out") } );
       event.onHangup( function() { print(">>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<") } );
       event.onChoice( "1st Floor", function() { say("Your destination is 1st Floor") } );
@@ -31,7 +31,7 @@ var event=prompt("where are you heading?",
 
 if(event.name!="hangup"){
   say("run outer call back for event [" + event.name +"," + event.value +"]");
-  event.onError( function() { say("You've got an error err! ") } );
+  event.onError( function() { say("You have an error err! ") } );
   event.onTimeout( function() { say("wait input time out") } );
   event.onChoice( "1st Floor", function() { say("Your destination is 1st Floor") } );
   event.onChoice( "2nd Floor", function() { say("Your destination is 2nd Floor") } );
