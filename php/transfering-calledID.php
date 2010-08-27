@@ -1,4 +1,6 @@
 <?php
+// This array is in the format of
+// tropo_number => transfer_to
 $numbers = array(
     '9165551212' => '13105551212',
     '6505551313' => '12065551313',
