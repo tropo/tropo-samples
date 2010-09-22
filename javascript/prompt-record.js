@@ -1,5 +1,5 @@
 // --------------------------------------------
-// Using prompt with recording
+// Using ask with recording
 // See http://www.tropo.com for more info
 // --------------------------------------------
 
@@ -14,7 +14,7 @@ answer()
 ",callerName:" + currentCall.callerName + ",calledName:" +
 currentCall.calledName)
 //var event=record("please say something");
- var event = prompt("http://127.0.0.1:8080/beep.wav where are you heading?",
+ var event = ask("http://example.com/beep.wav where are you heading?",
 {
     repeat: 3,
     record: true,
@@ -48,7 +48,7 @@ currentCall.calledName)
         say("wait input time out");
     },
     onHangup: function() {
-        print(">>>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<");
+        log(">>>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<");
     },
     onError: function() {
         say("You have an error!");
@@ -64,7 +64,7 @@ currentCall.calledName)
             say("wait input time out")
         });
         event.onHangup(function() {
-            print(">>>>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<")
+            log(">>>>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<")
         });
         event.onChoice("1st Floor",
         function() {
@@ -92,7 +92,7 @@ if (event.name != "hangup") {
     say("run outer call back for event [" + event.name + "," + event.value
     + "]");
     event.onError(function() {
-        say("You have an error! ")
+        say("You have an error!")
     });
     event.onTimeout(function() {
         say("wait input time out")
@@ -119,5 +119,5 @@ if (event.name != "hangup") {
     hangup()
 }
  else {
-    print(">>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<");
+    log(">>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<");
 }
