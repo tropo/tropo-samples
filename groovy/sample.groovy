@@ -4,7 +4,7 @@
 // --------------------------------------------
 
 answer()
-def event=prompt('where are you heading?',
+def event=ask('where are you heading?',
   [repeat:3,choices:"1st Floor (first, house wares, 1),\n 2nd Floor (second, bed and bath, 2),\n 3rd Floor (third, sporting goods, 3)", timeout:10.03456789, 
      onChoices: {event->
      event.onChoice( '1st Floor', { say('Your destination is 1st Floor') } )
