@@ -1,7 +1,7 @@
 answer
 
-event=prompt("where are you heading?",
-   {'repeat'=>2,'choices'=>"1st Floor (first, house wares, 1),\n 2nd Floor (second, bed and bath, 2),\n 3rd Floor (third, sporting goods, 3)", 'timeout'=>10.03456789, 
+event=ask("where are you heading?",
+   {'repeat'=>2,'choices'=>"1st Floor (first, house wares, 1), 2nd Floor (second, bed and bath, 2), 3rd Floor (third, sporting goods, 3)", 'timeout'=>10.03456789, 
     'onChoices'=>lambda { | event |
       event.onChoice( "1st Floor", lambda { say "Your destination is 1st Floor" } )
       event.onChoice( "2nd Floor", lambda { say "Your destination is 2nd Floor" } )
@@ -25,7 +25,7 @@ event=prompt("where are you heading?",
 )
 
 if event.name!="hangup"
-  say "run outter call back for event [#{event.name},#{event.value}]"
+  say "run outer call back for event [#{event.name},#{event.value}]"
   event.onError( lambda { say "You have an error! " } )
   event.onChoice( "1st Floor", lambda { say "Your destination is 1st Floor" } )
   event.onChoice( "2nd Floor", lambda { say "Your destination is 2nd Floor" } )
