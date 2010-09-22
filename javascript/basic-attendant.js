@@ -12,7 +12,7 @@ function allDone()
 }
 
 // -----------
-// turn the contacts into a comma seperated list of names
+// turn the contacts into a comma separated list of names
 
 function listNames( theContacts )
 {
@@ -53,11 +53,11 @@ var contacts = { 	"jonathan": { nameChoices: "Jonathan, Jonathan Taylor", number
 
 answer( 30 );
 
-prompt( "hello, and thank you for calling." );
+say("hello, and thank you for calling.");
 
-// prompt the user for the name of the person they desire
+// ask the user for the name of the person they're looking to reach
 
-event=prompt( "Who would you like to call?  Just say " + listNames( contacts ),
+event=ask( "Who would you like to call?  Just say " + listNames( contacts ),
 		{
 		  repeat:3,
 		  timeout:7,
@@ -76,12 +76,11 @@ if (event.name=='choice')
 {
   say( "ok, you said " + event.value +".  Please hold while I transfer you." );
 
-var ne = transfer( "sip:9"+contacts[ event.value ].number+"@10.6.63.201",
+var ne = transfer( "tel:+"+contacts[ event.value ].number,
      {
      answerOnMedia: false,
      callerID:      "tel:+14076179024",
      timeout:       60.3456,
-     method:        "bridged", // fixed to bridged currently
      playrepeat:    3,
      playvalue:     "Ring... Ring... Ring...",
      choices:       "1,2,3,4,5,6,7,8,9,0,*,#",
@@ -94,7 +93,7 @@ var ne = transfer( "sip:9"+contacts[ event.value ].number+"@10.6.63.201",
 
   log( "transfer event.name  = " + ne.name );
   log( "transfer event.value = " + ne.value );
-  say( "The other party disconnected.  Goodbye" );
+  say( "Goodbye" );
 
 }
 
