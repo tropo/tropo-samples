@@ -5,7 +5,7 @@
 
 answer()
 
-var event=prompt("where are you heading?",
+var event=ask("where are you heading?",
    {repeat:3,choices:"1st Floor (first, house wares, 1),\n 2nd Floor (second, bed and bath, 2),\n 3rd Floor (third, sporting goods, 3)", timeout:10.03456789, 
     onChoices: function(event) {
       event.onChoice( "1st Floor", function() { say("Your destination is 1st Floor") } );
