@@ -1,10 +1,9 @@
-
 function doSay(p){
 log(LogPrefix + p.say_as_type);
-prompt(p.say_as_type);
+say(p.say_as_type);
 var speak_it = say_as_start+ p.say_as + p.say_as_value + say_as_end;
 log(LogPrefix + speak_it);
-prompt(speak_it);
+say(speak_it);
 }
  
 answer();
