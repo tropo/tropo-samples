@@ -30,11 +30,11 @@ $tropo->ask("Welcome to the Tropo PHP example for $network");
 		{$tropo->say("You picked the Matrix. Dude, whoa.");
 		}
 		
-	// Tell Tropo what to do next. This redirects to the instructions under dispatch_post('/hangup', 'zip_hangup').
+	// Tell Tropo what to do next. This redirects to the instructions under dispatch_post('/hangup', 'app_hangup').
 	$tropo->on(array("event" => "continue", "next" => "testapp.php?uri=hangup"));
 
-	// Tell Tropo what to do if there's an error. This redirects to the instructions under dispatch_post('/error', 'zip_error').
-	$tropo->on(array("event" => "error", "next" => "testapp.php?uri=error"));
+	// Tell Tropo what to do if there's an error. This redirects to the instructions under dispatch_post('/incomplete', 'app_incomplete').
+	$tropo->on(array("event" => "incomplete", "next" => "testapp.php?uri=incomplete"));
 
 }
 
@@ -68,10 +68,9 @@ function app_start() {
 	// Ask the caller for input, pass in options.
 	$tropo->ask("Which of these trilogies do you like the best?  Press 1 to vote for Lord of the Rings, press 2 for the original Star Wars, 3 for the Star Wars prequels, or press 4 for the Matrix", $options);
 
-	// Tell Tropo what to do when the user has entered input, or if there's an error. This redirects to the instructions under dispatch_post('/end', 'zip_end') or dispatch_post('/error', 'app_error').
+	// Tell Tropo what to do when the user has entered input, or if there's an error. This redirects to the instructions under dispatch_post('/choice', 'app_choice') or dispatch_post('/incomplete', 'app_incomplete').
 	$tropo->on(array("event" => "continue", "next" => "testapp.php?uri=choice", "say" => "Please hold."));
-	$tropo->on(array("event" => "continue", "next" => "testapp.php?uri=hangup"));
-	$tropo->on(array("event" => "error", "next" => "testapp.php?uri=error"));
+	$tropo->on(array("event" => "incomplete", "next" => "testapp.php?uri=incomplete"));
 	
 	}
 
@@ -104,11 +103,11 @@ function app_choice() {
 		{$tropo->say("You picked the Matrix. Dude, woe.");
 		}
 
-	// Tell Tropo what to do next. This redirects to the instructions under dispatch_post('/hangup', 'zip_hangup').
+	// Tell Tropo what to do next. This redirects to the instructions under dispatch_post('/hangup', 'app_hangup').
 	$tropo->on(array("event" => "continue", "next" => "testapp.php?uri=hangup"));
 	
-	// Tell Tropo what to do if there's an error. This redirects to the instructions under dispatch_post('/error', 'zip_error').
-	$tropo->on(array("event" => "error", "next" => "testapp.php?uri=error"));
+	// Tell Tropo what to do if there's an problem, like a timeout. This redirects to the instructions under dispatch_post('/incomplete', 'app_incomplete').
+	$tropo->on(array("event" => "incomplete", "next" => "testapp.php?uri=incomplete"));
 	
 	// Render the JSON for the Tropo WebAPI to consume.
 	return $tropo->RenderJson();
@@ -124,7 +123,7 @@ function app_hangup() {
 	return $tropo->RenderJson();
 }
 
-dispatch_post('/error', 'app_error');
+dispatch_post('/incomplete', 'app_incomplete');
 function app_error() {
 	
 	$tropo = new Tropo();
