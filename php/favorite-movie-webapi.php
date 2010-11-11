@@ -52,7 +52,7 @@ function app_start() {
 	 // See if any text was sent with session start.
 	$initial_text = $session->getInitialText();
 
-	// If the initial text is a zip code, skip the input collection and get weather information.
+	// If the initial text is a zip code, skip the input collection and go right to results.
 	if(strlen($initial_text) == 1 && is_numeric($initial_text)) {
 	valid_text($tropo, $initial_text);
 	}
@@ -62,13 +62,13 @@ function app_start() {
 	// Welcome prompt.
 	$tropo->say("Welcome to the Tropo PHP example for $network");
 
-	// Set up options for zip code input.
+	// Set up options for input.
 	$options = array("attempts" => 3, "bargein" => true, "choices" => "1,2,3,4", "mode" => "dtmf", "name" => "movie", "timeout" => 30);
 
 	// Ask the caller for input, pass in options.
 	$tropo->ask("Which of these trilogies do you like the best?  Press 1 to vote for Lord of the Rings, press 2 for the original Star Wars, 3 for the Star Wars prequels, or press 4 for the Matrix", $options);
 
-	// Tell Tropo what to do when the user has entered input, or if there's an error. This redirects to the instructions under dispatch_post('/choice', 'app_choice') or dispatch_post('/incomplete', 'app_incomplete').
+	// Tell Tropo what to do when the user has entered input, or if there's a problem. This redirects to the instructions under dispatch_post('/choice', 'app_choice') or dispatch_post('/incomplete', 'app_incomplete').
 	$tropo->on(array("event" => "continue", "next" => "testapp.php?uri=choice", "say" => "Please hold."));
 	$tropo->on(array("event" => "incomplete", "next" => "testapp.php?uri=incomplete"));
 	
