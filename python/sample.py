@@ -5,7 +5,7 @@
 
 answer()
 
-event=prompt("where are you heading?",
+event=ask("where are you heading?",
    {'repeat':3,'choices':"1st Floor (first, house wares, 1), 2nd Floor (second, bed and bath, 2), 3rd Floor (third, sporting goods, 3)", 'timeout':10.03456789, 
     'onChoice':lambda event :
       event.onChoice( "1st Floor", lambda : say("Your destination is 1st Floor" ) ) and 
@@ -40,4 +40,3 @@ if event.name!="hangup":
   hangup()
 else:
   log(">>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<")
-	

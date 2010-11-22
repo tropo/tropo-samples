@@ -1,11 +1,11 @@
 answer()
 
 say('Welcome to the Tropo recording service.')
-startCallRecording("http://tropo.a-domain.com/post_audio?filname=mynewfile.wav")
+startCallRecording("http://example.com/post_audio?filname=mynewfile.wav")
 
-prompt('Welcome to groovy recording test', [choices: 'yes, no'])
+ask('Welcome to the Groovy recording test, would you like to be recorded? ', [choices: 'yes, no'])
 
-say('Great!')
+say('If you said yes, hooray!  If you said no, sorry about that.')
 stopCallRecording
 say('Thank you for using the Tropo recording service. Goodbye.')
 

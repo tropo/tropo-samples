@@ -8,7 +8,7 @@
 Contacts = { :jsgoecke => { :name_choices => "Jason, Jason Goecke", :number => "18005551212" },
              :jicksta  => { :name_choices => "Jay, Jay Phillips",   :number => "14155551212" } }
 
-# turn the contacts into a comma seperated list of names
+# turn the contacts into a comma separated list of names
 def list_names
   list_of_names = String.new
   Contacts.each { |contact| list_of_names = list_of_names + contact[1][:name_choices] + ", " }
@@ -28,7 +28,7 @@ end
 #answer the phone and play the initial greeting
 
 answer 30
-prompt "hello, and thank you for calling."
+say "hello, and thank you for calling."
 
 options = { "repeat"  => 3,
             "timeout" => 5,
@@ -43,7 +43,6 @@ options = { "repeat"  => 3,
                 options = { "answerOnMedia" => false,
                             "callerID"      => "tel:+14076179024",
                             "timeout"       => 60.3456,
-                            "method"        => "bridged", # fixed to bridged currently
                             "playrepeat"    => 3,
                             "playvalue"     => "Ring... Ring... Ring...",
                             "choices"       => "1,2,3,4,5,6,7,8,9,0,*,#",
@@ -54,7 +53,7 @@ options = { "repeat"  => 3,
                             "onCallFailure" => lambda { |event| log "Xfer Failure!: " + event.inspect.to_s },
                             "onChoice"      => lambda { |event| log "Xfer Cancelled!: " + event.inspect.to_s }
                           }
-                transfer_event = transfer "sip:9" + Contacts[event.value.to_sym][:number] + "@10.6.63.201", options
+                transfer_event = transfer "tel:+" + Contacts[event.value.to_sym][:number], options
               # When a user has said something not understood to be on the list provided in the prompt
               when "badChoice"
                 say "I'm sorry, I didn't understand what you said."
@@ -65,8 +64,8 @@ options = { "repeat"  => 3,
             }
           }
 
-# prompt the user for the name of the person they desire          
-event = prompt "Who would you like to call?  Just say " + list_names, options
+# ask the user for the name of the person they want to reach         
+event = ask "Who would you like to call?  Just say " + list_names, options
 
 # Hangup the call once complete
 hangup

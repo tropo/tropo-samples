@@ -13,7 +13,7 @@ class NBANews
 
     def getFeed
         res = Net::HTTP.start('www.nba.com') {|http|
-	        http.get('/rss/nba_rss.xml')
+            http.get('/rss/nba_rss.xml')
         }
         result = REXML::Document.new(res.body)
         @titles = []
@@ -34,7 +34,7 @@ class NBANews
         while currentIndex < @titles.size
             option = 'next'
             if detail == true
-                result=prompt("#{@descriptions[currentIndex]}",
+                result=ask("#{@descriptions[currentIndex]}",
                 {'silenceTimeout'=> 1,
                  'choices'=> "next(1, next), previous(2, previous), repeat(3, repeat), detail(4, detail), end(0, end)",
                  'maxTime'=>30,
@@ -46,7 +46,7 @@ class NBANews
                       event.onBadChoice( lambda { say "bad choice" } )}
                 })
             else
-                result=prompt("#{@titles[currentIndex]}",
+                result=ask("#{@titles[currentIndex]}",
                 {'silenceTimeout'=> 1,
                  'choices'=> "next(1, next), previous(2, previous), repeat(3, repeat), detail(4, detail), end(0, end)",
                  'maxTime'=>30,
