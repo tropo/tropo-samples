@@ -11,10 +11,15 @@ if (count($data) == 0) {
 while(1) {
   $data = fetchIncidents();
   foreach ($data as $incident) {
+    $last = $incident[10];
+    $wait = $incident[10] - $last;
+    $wait = ($wait > 10) ? 10 : $wait
     say("<speak><paragraph xml:lang='en-us-fmj'>At <say-as interpret-as='address'>{$incident[8]}</say-as> an {$incident[9]}.</paragraph></speak>");
     $timer = time();
   }
   $currTime = time();
+  // If it's been 30 seconds since the last message
+  // play a beep so the caller knows we're still there
   if ($currTime - $timer > 30) {
     say("http://hosting.tropo.com/37423/www/audio/beep-7.mp3");
   }

@@ -10,6 +10,7 @@ $base = (!empty($_SERVER['HTTPS'])) ? "https://" : "http://";
 $base .= $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 
 $tropo = new Tropo();
+$tropo->voice = 'allison';
 // set a default action
 $action =  (isset($_GET['event'])) ? $_GET['event'] : '/';
 
@@ -18,13 +19,13 @@ if ($action == '/') {
   
   // Set up the event that fires when the next response is sent from Tropo
   $tropo->on(array('event'=>'continue', 'next' => $base .'?event=checkin'));
-  $tropo->say('Welcome to the Four Square check in I V R.', array('voice' => $voice));
+  $tropo->say('Welcome to the Four Square check in I V R.');
 
   // Get last FS checkin
   $history = getapi('history',null,1);
   if (!is_array($history['checkins'])) {
     // Since we have no data, foursquare API must be having issues. Hang up.
-    $tropo->say('Could not reach the Four Square API. Try again later.', array('voice' => $voice));
+    $tropo->say('Could not reach the Four Square API. Try again later.');
     print $tropo;
     die();
   }
@@ -54,9 +55,8 @@ if ($action == '/') {
 
   // We allow the caller to say the name of the venue with voice recognition or to press
   // or say the number of the venue.
-  $tropo->say('Speak the name of the venue or press it\'s number.', array('voice' => $voice));
+  $tropo->say('Speak the name of the venue or press it\'s number.');
   $tropo->ask($say, array(
-    'voice' => $voice, 
     'choices'=>$choices,
     'required'=>true,
     'attempts'=>3,
@@ -80,16 +80,16 @@ if ($action == 'checkin') {
     if ($checkin['checkin']['mayor']['type'] != 'nochange') {
       $message .= ' '. $checkin['checkin']['mayor']['message'];
     }
-    $tropo->say($message, array('voice' => $voice));
+    $tropo->say($message);
   } else {
     // No value came back, so there was no match. Let the user know we
     // can't help.
     // An interesting enhancement here would be to look for a lack of matches
     // try again. Some better error handling than just hanging up would be
     // nice/
-    $tropo->say('Something went wrong. I do not know where to check you in.', array('voice' => $voice));
+    $tropo->say('Something went wrong. I do not know where to check you in.');
   }
-  $tropo->say('Good bye!', array('voice' => $voice));
+  $tropo->say('Good bye!');
 }
 
 // Spit out the JSON. Could have also used $tropo->renderJSON here
