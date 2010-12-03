@@ -45,7 +45,7 @@ foreach ($members as $to) {
   _log("Sending to " . $to);
   // Don't send to the person who recorded it.
   if ($to != $currentCall->callerID) {
-    message('You have a message from the phone tree. ' . $recording->value, array('to' => 'tel:+1' . $to, 'callerID' => $currentCall->calledID));    
+    message('You have a message from the phone tree. ' . $recording->value, array('to' => '+1' . $to, 'callerID' => $currentCall->calledID));    
   }
 }
 
