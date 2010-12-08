@@ -77,7 +77,7 @@ if (event.name=='choice')
 var ne = transfer( "tel:+"+contacts[ event.value ].number,
      {
      answerOnMedia: false,
-     callerID:      "tel:+14076179024",
+     callerID:      "+14076179024",
      timeout:       60.3456,
      playrepeat:    3,
      playvalue:     "Ring... Ring... Ring...",
