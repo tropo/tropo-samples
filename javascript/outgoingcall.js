@@ -3,16 +3,12 @@
 // See http://www.tropo.com for more info
 // --------------------------------------------
 
-// If this script is called via HTTP, the initial "answer();" can be
-// removed.
-
-answer();
-event = call("sip:14076463131@10.6.63.201", 
+event = call("sip:14075551313@10.6.63.201", 
       {
       answerOnMedia: false,
-      callerID:      "tel:+666666666666",
+      callerID:      "tel:+4075551212",
       timeout:        12.123,
-      onAnswer:       function(event){ log("******************** Answered from " + event.value.calleeId) },
+      onAnswer:       function(event){ log("******************** Answered from " + event.value.calledID) },
       onError:        function( ) { log("******************** oops , error *********************") },
       onTimeout:      function( ) {  log("******************** timeout *********************") },
       onCallFailure:  function( ) {  log("******************** call failed *********************") }
@@ -20,5 +16,5 @@ event = call("sip:14076463131@10.6.63.201",
 
 if(event.name=='answer'){
   newCall = event.value;
-  log("Outgoing call gets answered by " + newCall.calleeId);
+  log("Outgoing call gets answered by " + newCall.calledID);
 }

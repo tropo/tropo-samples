@@ -1,5 +1,4 @@
 <?php
-answer(30);
 
 $channel = $currentCall->channel;
 $network = $currentCall->network;
@@ -8,7 +7,7 @@ $callerid = $currentCall->callerID;
 if ($channel == 'TEXT') {
   $initialPrompt = 'What is your zip code?';
   $timeout = 300;
-  $repeat = 0;
+  $attempts = 0;
   // If they start the message with 5 digits, don't ask for their zip code.
   if (preg_match('/\d{5}/',$currentCall->initialText)) {
     $initialPrompt = '';
@@ -16,7 +15,7 @@ if ($channel == 'TEXT') {
 } else {
   $initialPrompt = 'Hello. What zip code are you calling from?';
   $timeout = 30;
-  $repeat = 3;
+  $attempts = 3;
   // On voice, pause a moment before speaking
   sleep(2);
 }
@@ -27,7 +26,7 @@ $event = ask($initialPrompt,
             			  "choices" => '[5 DIGITS]',
             			  'voice' => 'allison',
             			  "timeout" => $timeout,
-            			  "repeat" => $repeat,
+            			  "attempts" => $attempts,
             			  "onChoice" => create_function('$event','onzip($event->value)'),
             			) 
             		 );  

@@ -13,10 +13,8 @@ function asDigits(instr) {
   return s;
 }
 
-answer();
 
 var sipuri = currentCall.callerID;
 
 say("You called from " + asDigits(sipuri.slice(0,10)));
 
-hangup();

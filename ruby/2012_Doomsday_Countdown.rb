@@ -67,8 +67,6 @@ else
   timezone = 'eastern'
 end
 
-answer
-
 # Ask if they want to hear the countdown
 options = DEFAULT_OPTIONS.merge!({ :choices => 'yes(yes, 1), no(no,2)' })
 result = ask '' + 'Countdown to 2012 activated!  Do you want to know how long you have before disaster strikes?', options
@@ -125,5 +123,3 @@ loop do
   end
   
 end
-
-hangup

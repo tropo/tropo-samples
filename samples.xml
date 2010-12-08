@@ -1,12 +1,12 @@
 <applications>
-  <application name="Groovy - Traffic Report" type="Groovy" url="http://github.com/voxeo/tropo-samples/raw/master/groovy/traffic.groovy">
+  <application name="Groovy - Traffic Report" type="Groovy" url="https://github.com/tropo/tropo-samples/raw/master/groovy/traffic.groovy">
     <![CDATA[
       <p style='font-size:11px;'>Simple Tropo mashup which allows the caller to enter a zipcode and hear a list of traffic incidents provided by Yahoo! Local.</p>
       <p style='font-size:11px;'>The caller is prompted for their zipcode and the XmlSlurper function is used to retrieve a list of incidents using the Yahoo! Local api and then speak them back to the caller. That's it!</p>
       <p style='font-size:11px;'>Note that an appid should be obtained here and inserted into the sample where indicated below within the source.</p>
     ]]>
   </application>
-  <application name="PHP - Local Search" type="PHP" url="http://github.com/voxeo/tropo-samples/raw/master/php/localsearch.php">
+  <application name="PHP - Local Search" type="PHP" url="https://github.com/tropo/tropo-samples/raw/master/php/localsearch.php">
     <![CDATA[
       <p style='font-size:11px;'>The local-search demo is a multi-modal application. One code base working with voice, IM, and SMS, each with a UI that is appropriate for the medium.</p>
       <p style='font-size:11px;'>The application connects to Yahoo Local Search, asks for a zip code and a search term, then gives you a list of search results. For voice, a grammar of restaurant types is used. For text channels, a free-form text grammar allows any search term.</p>
@@ -16,9 +16,33 @@
       <p style='font-size:11px;'>Also demonstrated is changing timeout intervals and other parameters based on the channel, as well as detecting that the initial text sent to the text channel matches the grammar and skipping the zip code prompt if it does.</p>
     ]]>
   </application>
-  <application name="Python - Pizza Order" type="Python" url="http://github.com/voxeo/tropo-samples/raw/master/python/orderpizza.py">
+  <application name="Python - Pizza Order" type="Python" url="https://github.com/tropo/tropo-samples/raw/master/python/orderpizza.py">
     <![CDATA[
       <p style='font-size:11px;'>Put together your perfect pizza order with this voice driven application.</p>
+    ]]>
+  </application>  
+  <application name="Ruby - 2012 Doomsday clock" type="Ruby" url="https://github.com/tropo/tropo-samples/raw/master/ruby/2012_Doomsday_Countdown.rb">
+    <![CDATA[
+      <p style='font-size:11px;'>We all know it's all going to end on 2012, so find out exactly how much time is left until the Zombie apocalypse !  </p>
+      <p style='font-size:11px;'>The application uses the phone number to determine the timezone, and does the time and date calculations for you.  </p>
+    ]]>
+  </application> 
+  <application name="Ruby - Yahoo Restaurant Search" type="Ruby" url="https://github.com/voxeo/tropo-samples/raw/master/ruby/restarauntfinder.rb">
+    <![CDATA[
+      <p style='font-size:11px;'>Uses YQL to find out some data on local restaurants!   </p>
+    ]]>
+  </application> 
+  
+  <application name="Ruby - Bay Area Rapid Transport (BART) ETA" type="Ruby" url="https://github.com/tropo/tropo-samples/raw/master/ruby/bart_eta.rb">
+    <![CDATA[
+      <p style='font-size:11px;'>Find out just how long you will be waiting for your ride!</p>
+    ]]>
+  </application>
+
+  <application name="Troplets - Tropo micro application" type="Ruby" url="https://github.com/tropo/tropo-troplets/raw/master/troplets.php">
+    <![CDATA[
+      <p style='font-size:11px;'>Troplets are small bits of logic that run in the Tropo cloud. Troplets are an easy way to leverage the power of the Tropo platform to help your business or organization. Troplets can be invoked by making simple HTTP requests and passing in the parameters you want to use in your Troplet. Each Troplet has both required and optional parameters, making them easy to use and also customizable should you want to do something specific with your Troplet.</p>
+      <a href="http://troplets.tropo.com" style='font-size:11px;'>http://troplets.tropo.com</a></p>      
     ]]>
   </application>
 </applications>

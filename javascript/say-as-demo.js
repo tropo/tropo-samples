@@ -6,7 +6,6 @@ log(LogPrefix + speak_it);
 say(speak_it);
 }
  
-answer();
 var LogPrefix = "Log: ";
 var say_as_end = "</say-as></speak>";
 var say_as_start = "<?xml version='1.0'?><speak>";
@@ -45,6 +44,3 @@ o_TIME.say_as = "<say-as interpret-as='vxml:time'>";
 o_TIME.say_as_value = '0515a';
 o_TIME.say_as_type= 'time';
 doSay(o_TIME);
- 
- 
-hangup();

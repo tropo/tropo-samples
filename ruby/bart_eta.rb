@@ -81,7 +81,7 @@ end
 stations = fetch_bart_stations
 
 options = { :choices     => build_choices(stations),
-            :repeat      => 3,
+            :attempts      => 3,
             :onBadChoice => lambda { say 'I am sorry, I did not understand what you said.' },
             :onTimeout   => lambda { say 'I did not hear anything.' },
             :onChoice    => lambda { |choice|
@@ -107,12 +107,8 @@ options = { :choices     => build_choices(stations),
                                     } 
            }
 
-answer
-
 say 'Welcome to the bay area rapid transit station estimated arrival service.'
   
 ask 'Please speak the name of the station that you would like estimated arrivals for.', options
 
 say 'Thank you, goodbye.'
-
-hangup
