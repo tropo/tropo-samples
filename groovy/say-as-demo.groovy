@@ -5,7 +5,6 @@
 // See http://www.tropo.com for more info
 // --------------------------------------------
 
-answer();
 s_log_prefix = "Log: "
 s_xml_speak_start ="<?xml version='1.0'?><speak>"
 s_say_as_speak_end = "</say-as></speak>"
@@ -69,5 +68,3 @@ say("Listen to phone")
 log(s_log_prefix + s_prompt)
 say(s_prompt)
 say("Good bye and have a nice day!")
-
-hangup();
