@@ -10,7 +10,7 @@ import java.util.Random;
 Random generator = new Random()
 
 def outcome = ["crushes", "mortally wounds", "eats ", "disembowels ", "steps on", "squashes"]
-def areas = ["the office of the director of ninja affairs", "next to Engineering", "in the brake room", "at your desk", "in the bathroom"]
+def areas = ["the office of the director of ninja affairs", "next to Engineering", "in the break room", "at your desk", "in the bathroom"]
 def places = ["nothing", "an empty coke can", "a fudge round","a spider web of cat five cables","an eye kia chair"]
 def items = ["lantern","scroll","compass"]
 
