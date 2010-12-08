@@ -27,23 +27,23 @@ zipcode_options = { :choices     => "[5 DIGITS]",
 
                                            #Fetch the JSON from the YQL API and convert the resulting 
                                            #JSON data to a Ruby hash
-                                           restaraunts = JSON.parse(open(url).read)
+                                           restaurant = JSON.parse(open(url).read)
 
                                            #Speak back the results
-                                           if restaraunts
-                                             restaraunts["query"]["results"]["Result"].each do |restaraunt|
-                                               say 'The phone number for ' + restaraunt["Title"] + ' in ' + restaraunt["City"] + 
-                                               ' is ' + restaraunt["Phone"]
+                                           if restaurant
+                                             restaurant["query"]["results"]["Result"].each do |restaurant|
+                                               say 'The phone number for ' + restaurant["Title"] + ' in ' + restaurant["City"] + 
+                                               ' is ' + restaurant["Phone"]
                                              end
                                            else
-                                             say 'I am sorry, an error occurred while fetching restaraunts in your area'
+                                             say 'I am sorry, an error occurred while fetching restaurant in your area'
                                            end
                                          }
                       }
-                      ask 'Say the type of restaraunt you would like to search for.', search_options
+                      ask 'Say the type of restaurant you would like to search for.', search_options
                     }
           }
   
-ask 'Enter or say your ZIP code to find a Restaurant in your area.', zipcode_options
+ask 'Enter or say your ZIP code to find a restaurant in your area.', zipcode_options
 say 'Thats all. Goodbye.'
 hangup
