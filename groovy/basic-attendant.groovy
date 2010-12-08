@@ -25,17 +25,15 @@ def listOptions(theContacts) {
 }
 
 def contacts = [
-    "jonathan": [ nameChoices: "Jonathan, Jonathan Taylor", number: "14074434233" ],
-    "michael" : [ nameChoices: "Michael, Michael Smith", number: "14074181800" ],
-    "stephen" : [ nameChoices: "Stephen, Stephen Neish", number: "14076463131" ] ]
+    "jonathan": [ nameChoices: "Jason, Jason Goecke", number: "14075551212" ],
+    "michael" : [ nameChoices: "Adam, Adam Kalsey", number: "14075551313" ],
+    "stephen" : [ nameChoices: "Jose, Jose de Castro", number: "14075551414" ] ]
 
-
-answer( 30 )
 say( "Hello, and thank you for calling." )
 
 def text = "Who would you like to call? Just say " + listNames( contacts )
 def event = ask(text, [
-    repeat:3, 
+    attempts:3, 
     timeout:7, 
     choices:listOptions( contacts ), 
     onEvent: { event->
@@ -51,16 +49,14 @@ if (event.name == "choice") {
    
     def ne = transfer( "tel:+${contacts[ event.value ].number}, [
         answerOnMedia: false,
-        callerId:      "tel:+14076179024",
+        callerId:      "+14076179024",
         timeout:       60.3456,
         playrepeat:    3,
         playvalue:     "Ring... Ring... Ring...",
-        choices:       "1,2,3,4,5,6,7,8,9,0,*,#",
-        onSuccess:     { ne-> log("*********transferred to $event.value.calleeId") },  
+        onSuccess:     { ne-> log("*********transferred to $event.value.calledID") },  
         onError:       { ne-> log("*********transfer error") },  
         onTimeout:     { ne-> log("*********transfer timeout") },  
-        onCallFailure: { ne-> log("*********transfer failed") },  
-        onChoice:      { ne-> log("*********transfer canceled") }  
+        onCallFailure: { ne-> log("*********transfer failed") }
     ] )
 
     log "transfer event.name  = $ne.name"
@@ -68,5 +64,3 @@ if (event.name == "choice") {
     
     say "Goodbye" 
 }
-
-hangup()
