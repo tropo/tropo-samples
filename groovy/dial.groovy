@@ -3,17 +3,16 @@
 // See http://www.tropo.com for more info
 // --------------------------------------------
 
-answer()
 print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>$callFactory")
-say("transfering to ")
+say("transferring to ")
 
 // Place a phone number here
-def phoneNo = 14074181800
+def phoneNo = 14075551212
 
 def event = call("sip:${phoneNo}@10.6.63.201",
       [
       answerOnMedia: false,
-      callerID:      "tel:+666666666666",
+      callerID:      "+14075551313",
       timeout:        60.3456,
       // Error in debugger if event.value.calleeId is used
       onAnswer:       { event-> log("******************** Answered from ") },
@@ -23,10 +22,7 @@ def event = call("sip:${phoneNo}@10.6.63.201",
       ] )
 
 if (event.choice == 'answer'){
-  def ncall=event.value
-  ncall.say("call to sip:" + phoneNo + "@10.6.63.201")
-  ncall.say("This a dial test for Groovy on the Tropo platform.")
-  ncall.hangup()
+  def newcall=event.value
+  newcall.say("call to sip:" + phoneNo + "@10.6.63.201")
+  newcall.say("This a dial test for Groovy on the Tropo platform.")
 }
-hangup()
-
