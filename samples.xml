@@ -41,7 +41,10 @@
 
   <application name="Troplets - Tropo micro application" type="Ruby" url="https://github.com/tropo/tropo-troplets/raw/master/troplets.php">
     <![CDATA[
-      <p style='font-size:11px;'>Troplets are micro applications that run in the Tropo cloud.</p>
+      <p style='font-size:11px;'>Troplets are small bits of logic that run in the Tropo cloud. Troplets are an easy way to leverage the power of the Tropo platform to help your business or organization. Troplets can be invoked by making simple HTTP requests and passing in the parameters you want to use in your Troplet. Each Troplet has both required and optional parameters, making them easy to use and also customizable should you want to do something specific with your Troplet.</p>
+      <a href="http://troplets.tropo.com" style='font-size:11px;'>http://troplets.tropo.com</a></p>      
     ]]>
   </application>  
 </applications>
+
+
