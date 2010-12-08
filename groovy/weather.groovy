@@ -37,7 +37,6 @@ def getNoaaReport(zipcode) {
    return report.replace(".", ".\n")
 }
 
-answer(30)
 
 // Welcome
 say( "Hello, and thank you for using our service." )
@@ -48,5 +47,3 @@ def zipcode = getZipCode()
 // Get report from NOAA's website
 def report=getNoaaReport(zipcode)
 say("<speak>Here is the weather report for zip code <say-as interpret-as='vxml:digits'> ${zipcode}</say-as> ${report}</speak>")
-
-hangup()
