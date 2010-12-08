@@ -10,14 +10,13 @@ def sayToppings(top):
 #def main():
     
     
-answer()
 wait(500)
 say("Welcome at Alfredos's Pizza Network.")
 wait(500)
 say("Please choose your size first, then the toppings.")
 
 result = ask("We offer small, medium and family size pizzas. Which size would you like?",
-{'choices':"small,1,medium,2,family,3,large", 'repeat':3})
+{'choices':"small,1,medium,2,family,3,large", 'attempts':3})
 
 if (result.name == 'choice'):
     if (result.value == "small")or (result.value == "1"): 
@@ -42,7 +41,7 @@ cnt = 0
 while(exit == False):
     cnt += 1
     result = ask("Choose between peppers, onions, jalapenos, mushrooms, corn. To finish say done or press 9",
-    {'choices':"peppers, 1, onions, 2, jalapenos, 3, mushrooms, 4, corn, 4, done, 9", 'repeat':1})
+    {'choices':"peppers, 1, onions, 2, jalapenos, 3, mushrooms, 4, corn, 4, done, 9", 'attempts':1})
     
     if (result.name == 'choice'):
         if (result.value == "peppers")or (result.value == "1"): 
@@ -67,7 +66,7 @@ while(exit == False):
     if (cnt == 3):
 	        exit = True
     if exit:
-        result2 = ask("Do you want to add more toppings?", {'choices':"yes(1,yes), no(2,no)", 'repeat':2})
+        result2 = ask("Do you want to add more toppings?", {'choices':"yes(1,yes), no(2,no)", 'attempts':2})
         if (result2.name == 'choice'):
             if (result2.value == "yes") or (result2.value == "1"): 
                 exit = False
@@ -80,7 +79,7 @@ cnt = 0
 while(exit == False):
     cnt += 1
     result = ask("Choose between pepperoni, ham, bacon. To finish say done or press 9",
-    {'choices':"pepperoni, 1, ham, 2, bacon, 3, done, 9", 'repeat':3})
+    {'choices':"pepperoni, 1, ham, 2, bacon, 3, done, 9", 'attempts':3})
     
     if (result.name == 'choice'):
         if (result.value == "pepperoni")or (result.value == "1"): 
@@ -103,7 +102,7 @@ while(exit == False):
     if (cnt == 3):
             exit = True
     if exit:
-        result2 = ask("Do you want to add more toppings?", {'choices':"yes(1,yes), no(2,no)", 'repeat':2})
+        result2 = ask("Do you want to add more toppings?", {'choices':"yes(1,yes), no(2,no)", 'attempts':2})
         if (result2.name == 'choice'):
             if (result2.value == "yes") or (result2.value == "1"): 
                 exit = False
@@ -126,6 +125,4 @@ say("We will deliver your pizza in " + deliverytime + " Minutes")
 say("Thanks for ordering at Alfredos's Pizza Network.")
 
 wait(500)
-               
 
-hangup()

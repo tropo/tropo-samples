@@ -1,5 +1,3 @@
-answer() 
-
 def asDigits(instr) {
   def s  = '';
  
@@ -49,5 +47,3 @@ def count = 1
 trafficxml.Result.each { result -> say("Item " + count++ + ": " + result.Title.text() + ", " + result.Description.text())}
 
 say("That completes your traffic report for zipcode " + asDigits(zipcode) + ". Goodbye!") 
-
-hangup()
