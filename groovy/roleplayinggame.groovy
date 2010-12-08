@@ -7,8 +7,6 @@
 
 import java.util.Random;
 
-answer()
-
 Random generator = new Random()
 
 def outcome = ["crushes", "mortally wounds", "eats ", "disembowels ", "steps on", "squashes"]
@@ -100,4 +98,3 @@ result=ask( "What do you want to do?", [choices:"attack,run,north,south,east,wes
   }
 }
 
-hangup()

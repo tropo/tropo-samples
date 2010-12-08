@@ -13,10 +13,6 @@ def asDigits(instr) {
   return s;
 }
 
-answer();
-
 def sipuri = currentCall.callerID;
 
 say("You called from " + asDigits(sipuri.substring(0,10)));
-
-hangup();

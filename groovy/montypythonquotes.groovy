@@ -40,7 +40,7 @@ listQuotes = [ 'Always look on the bright side of life.',
                'We are no longer the knights who say nee! We are now the knights who say ekki-ekki-ekki-pitang-zoom-boing!',
                'Nudge, nudge, wink, wink. Know what I mean?',
                'And the Lord spake, saying, First shalt thou take out the Holy Pin. Then shalt thou count to three, no more, no less. Three shall be the number thou shalt count, and the number of the counting shall be three. Four shalt thou not count, neither count thou two, excepting that thou then proceed to three. Five is right out.',
-               'Now stand aside, worthy adversary.  Tis but a scratch.  A scratch? Your arms off!  No, it isnÕt.  Well, whats that, then?  Ive had worse.',
+               'Now stand aside, worthy adversary.  Tis but a scratch.  A scratch? Your arms off!  No, it isnï¿½t.  Well, whats that, then?  Ive had worse.',
                'Look, you stupid bastard. Youve got no arms left.   Yes, I have.   Look!   Just a flesh wound.',
                'What? Ridden on a horse?   Yes      Youre using coconuts!      What?       Youve got two empty halves of coconuts and youre banging them together!     So?',
                'Oh! Come and see the violence inherent in the system! Help, help! Im being repressed!',
@@ -50,7 +50,6 @@ listQuotes = [ 'Always look on the bright side of life.',
                'No, no. What else floats in water?   Bread. Apples.  Very small rocks.  Cider.  Gravy.  Cherries.  Mud.  Churches.  Led! Led!  A Duck.  Exactly. So, logically...  If she weighed the same as a duck... shes made of wood.   And therefore... ...A witch! ',
                'First you must find ... another shrubbery!  Then, when you have found the shrubbery, you must place it here, beside this shrubbery, only slightly higher so you get a two layer effect with a little path running down the middle. (A path! A path!) Then, you must cut down the mightiest tree in the forrest... with... a herring!' ]
 
-answer()
 
 say( "Welcome to the Tropo Monty Python quote server (in Groovy)" )
 
@@ -155,5 +154,3 @@ while( !bHangup && ( runs < 20 ))
 }
 
 say("goodbye")
-
-hangup()

@@ -7,8 +7,6 @@
 // http://www.fraudlabs.com/areacodeworld.aspx
 // and replace "LICENSEKEY" in the URL below  with the key provided to you.
 
-answer()
-
 def strSipURI = currentCall.callerID;
 def strNPA = strSipURI.substring(0,3);
 def strNXX = strSipURI.substring(3,6);
@@ -23,6 +21,4 @@ XmlParser parser = new XmlParser()
 def strXML = parser.parseText (xml)
 
   say(" which is located in ${strXML.CITY.text()} at latitude ${strXML.LATITUDE.text()} and longitude ${strXML.LONGITUDE.text()}. You are in ${strXML.COUNTY.text()} county, which has a population of ${strXML.COUNTY_POPULATION.text()}. Your time zone is G M T ${strXML.TIMEZONE.text()}".toLowerCase());
-
-hangup()
 
