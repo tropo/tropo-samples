@@ -1,7 +1,5 @@
 import java.math.*
 
-answer()
-
 precision = new MathContext(3) 
 
 def calcBMI(heightInM, weightInKG)
@@ -71,5 +69,3 @@ def maxIdealWeightKG = calcIdealWeight(heightInM,maxIdealBMIndex)
 def maxIdealWeightLB = maxIdealWeightKG/0.4535924 as int
 
 say "According to the US National Institutes of Health, your ideal weight is between " + minIdealWeightLB + " and " + maxIdealWeightLB + " pounds.  Thank you for using the Tropo BMI calculator.  Goodbye!"
-
-hangup()
