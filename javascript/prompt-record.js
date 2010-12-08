@@ -3,9 +3,7 @@
 // See http://www.tropo.com for more info
 // --------------------------------------------
 
-answer()
-
- wait(1000)
+wait(1000)
 // wait for 1 second
  log("this is a log demo")
 
@@ -16,7 +14,7 @@ currentCall.calledName)
 //var event=record("please say something");
  var event = ask("http://example.com/beep.wav where are you heading?",
 {
-    repeat: 3,
+    attempts: 3,
     record: true,
     beep: true,
     silenceTimeout: 3,
@@ -116,7 +114,6 @@ if (event.name != "hangup") {
         say("you said " + event.recordURI);
     });
     say("Thanks for testing Java Script on the Tropo platform");
-    hangup()
 }
  else {
     log(">>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<");

@@ -19,22 +19,22 @@ var unique_id = currentCall.callerID + "_" + t0;
 var base_url = "http://YOUR.SERVER"
 
 // CALL FLOW
-answer();
+
 wait(1500);
 
 log("Incoming call info: callerID:" + currentCall.callerId + ", calledID:" + currentCall.calledId +", callerName:" + currentCall.callerName + ", calledName:" + currentCall.calledName);
 
 var event = record("Please leave your message after the tone.",
 {  // RECORD VARIABLES
-repeat: 2,
+    attempts: 2,
     record: true,
     beep: true,
     timeout: 5,
     maxTime: 60,
-bargein: false,
-recordURI: base_url+"/post_audio_to_s3?filename="+unique_id+".wav",
-transcriptionOutURI: base_url+"/receive_transcription",
-transcriptionId: unique_id,
+    bargein: false,
+    recordURI: base_url+"/post_audio_to_s3?filename="+unique_id+".wav",
+    transcriptionOutURI: base_url+"/receive_transcription",
+    transcriptionId: unique_id,
 
 // RECORD EVENTS
     onEvent: function(event) {

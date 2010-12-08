@@ -26,7 +26,7 @@ function listNames( theContacts )
 }
 
 // -----------
-// turn the contacts into a comma seperated list of options for each contact (simple grammar)
+// turn the contacts into a comma separated list of options for each contact (simple grammar)
 
 function listOptions( theContacts )
 {
@@ -45,13 +45,11 @@ function listOptions( theContacts )
 
 // define the list of contacts
 
-var contacts = { 	"jonathan": { nameChoices: "Jonathan, Jonathan Taylor", number: "14074434233" },
-					"michael" : { nameChoices: "Michael, Michael Smith",    number: "14074181800" },
-					"stephen" : { nameChoices: "Stephen, Stephen Neish",    number: "14076463131" } };
+var contacts = { 	"jason": { nameChoices: "Jason, Jason Goecke", number: "14075551212" },
+					"adam" : { nameChoices: "Adam, Adam Kalsey",    number: "14075551313" },
+					"jose" : { nameChoices: "Jose, Jose de Castro",    number: "14075551414" } };
 
 // answer the phone and play the initial greeting
-
-answer( 30 );
 
 say("hello, and thank you for calling.");
 
@@ -59,7 +57,7 @@ say("hello, and thank you for calling.");
 
 event=ask( "Who would you like to call?  Just say " + listNames( contacts ),
 		{
-		  repeat:3,
+		  attempts:3,
 		  timeout:7,
 		  choices:listOptions( contacts ),
 		  onEvent: function( event )
@@ -83,12 +81,10 @@ var ne = transfer( "tel:+"+contacts[ event.value ].number,
      timeout:       60.3456,
      playrepeat:    3,
      playvalue:     "Ring... Ring... Ring...",
-     choices:       "1,2,3,4,5,6,7,8,9,0,*,#",
-     onSuccess:     function(event){ log("*********transfered to " + event.value.calleeId)},
+     onSuccess:     function(event){ log("*********transferred to " + event.value.calledID)},
      onError:       function(event){ log("*********transfer error")},
      onTimeout:     function(event){ log("*********transfer timeout")},
-     onCallFailure: function(event){ log("*********transfer failed")},
-     onChoice:      function(event){ log("*********transfer canceled")}
+     onCallFailure: function(event){ log("*********transfer failed")}
      } )
 
   log( "transfer event.name  = " + ne.name );
@@ -96,5 +92,3 @@ var ne = transfer( "tel:+"+contacts[ event.value ].number,
   say( "Goodbye" );
 
 }
-
-hangup();
