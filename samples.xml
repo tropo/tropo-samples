@@ -39,7 +39,7 @@
     ]]>
   </application>
 
-  <application name="Troplets !!" type="Ruby" url="https://github.com/tropo/tropo-troplets/raw/master/troplets.php">
+  <application name="Troplets - Tropo micro application" type="Ruby" url="https://github.com/tropo/tropo-troplets/raw/master/troplets.php">
     <![CDATA[
       <p style='font-size:11px;'>Troplets are micro applications that run in the Tropo cloud.</p>
     ]]>
