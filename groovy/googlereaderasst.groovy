@@ -588,7 +588,6 @@ void log(String s)
 //    MAIN
 //**********************************************************************************
 
-answer();
 createAuthToken(gState);
 if ( gState.gLastError != "" ) {
 	say("There was an error authenticating with Google. Good bye!")
@@ -601,7 +600,7 @@ say("Hello and welcome to Google Reader phone application.");
 while (1) {
 	ask("You can say " + buildMenu(gState.gMainMenu, 1),
 			[
-			repeat      : 100,
+			attempts      : 100,
 			timeout		: 5,		
 			choices     : buildMenu(gState.gMainMenu, 0),
 			onTimeout	: { event-> processMainMenuChoice( gState, "List" ) },
