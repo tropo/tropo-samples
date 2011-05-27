@@ -27,7 +27,7 @@
       <p style='font-size:11px;'>The application uses the phone number to determine the timezone, and does the time and date calculations for you.  </p>
     ]]>
   </application> 
-  <application name="Ruby - Yahoo Restaurant Search" type="Ruby" url="https://github.com/voxeo/tropo-samples/raw/master/ruby/restarauntfinder.rb" clone="true">
+  <application name="Ruby - Yahoo Restaurant Search" type="Ruby" url="https://github.com/tropo/tropo-samples/raw/master/ruby/restaurantfinder.rb" clone="true">
     <![CDATA[
       <p style='font-size:11px;'>Uses YQL to find out some data on local restaurants!   </p>
     ]]>
