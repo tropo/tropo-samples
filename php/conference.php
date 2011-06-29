@@ -12,10 +12,11 @@ $pins['1234'] = ''; // won't alert
 
 // If set to true, only known Conference IDs will be accepted
 $require_pin = false;
+answer();
 
 $voice = 'kate';
 
-while ($currentCall->isActive) {
+while ($currentCall->isActive()) {
   $response = ask('Enter your conference ID, followed by the pound key.', array(
     'terminator' => '#',
     'choices' => '[1-10 DIGITS]',
