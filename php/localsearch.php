@@ -7,7 +7,7 @@ $callerid = $currentCall->callerID;
 if ($channel == 'TEXT') {
   $initialPrompt = 'What is your zip code?';
   $timeout = 300;
-  $attempts = 0;
+  $attempts = 1;
   // If they start the message with 5 digits, don't ask for their zip code.
   if (preg_match('/\d{5}/',$currentCall->initialText)) {
     $initialPrompt = '';
