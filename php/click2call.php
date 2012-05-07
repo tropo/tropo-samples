@@ -4,6 +4,14 @@
 // Download it and place in the same directory as 
 // this script.
 
+// Create a Tropo Scripting application and enter
+// the application URL as 
+// <path-to-this-script>?action=tropo&tropo-engine=php
+// For example, if you upload this file as 
+// http://example.com/click2call.php then your 
+// Tropo applicaiton URL is 
+// http://example.com/click2call.php?action=tropo&tropo-engine=php
+
 // Configure this with the phone number
 // that should be called when the user clicks
 // (this is probably your phone number)
