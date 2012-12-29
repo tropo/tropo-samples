@@ -91,29 +91,10 @@ function print_results($results, $channel, $network) {
     say('No results found. Try another search.',array('voice' => 'allison'));
     return;
   }
-  if ($channel == 'TEXT') {
-    if ($network == 'SMS') {
-      return print_results_sms($results);
-    } else {
-      return print_results_im($results);      
-    }
+  if ($network == 'SMS') {
+    return print_results_sms($results);
   } else {
     return print_results_voice($results);
-  }
-}
-
-function print_results_im($results) {
-  foreach ($results as $location) {
-    // Workaround for Tropo bug. Tropo tries to play URLs as audio instead
-    // of printing them, so strip http:// off and this won't happen
-    $location['ClickUrl'] = str_replace('http://', '', $location['ClickUrl']);
-    $ret = $location['Title'] . " - ";
-    $ret .= $location['Address'] . ', '. $location['City'] . " - ";
-    $ret .= $location['Phone'] . " - ";
-    $ret .= $location['ClickUrl'];
-    // Individual say() to get individual messages
-    say($ret);
-    
   }
 }
 
