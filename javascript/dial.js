@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 // --------------------------------------------
 // From inside an active call, how do you dial
 // another number and direct your prompts and
@@ -6,7 +12,6 @@
 // This sample demonstrates how to use Tropo's
 // objects to maintain two concurrent calls.
 //
-// http://www.tropo.com
 // --------------------------------------------
 
 say("Thank you for calling. This is call A.");

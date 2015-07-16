@@ -1,4 +1,6 @@
-answer
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
 
 options = { :choices     => "pulled pork(pulled pork),
                              peanut butter and jelly(pbj, peanut butter and jelly), 
@@ -15,5 +17,3 @@ options = { :choices     => "pulled pork(pulled pork),
 ask 'Hello there! Please tell me, what is the best sandwich ever created', options
 
 say 'Thank you for playing sandwich trivia. Goodbye'
-
-hangup

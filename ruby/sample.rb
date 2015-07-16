@@ -1,4 +1,7 @@
-answer
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
+
 
 event=ask("where are you heading?",
    {'repeat'=>2,'choices'=>"1st Floor (first, house wares, 1), 2nd Floor (second, bed and bath, 2), 3rd Floor (third, sporting goods, 3)", 'timeout'=>10.03456789, 
@@ -32,7 +35,6 @@ if event.name!="hangup"
   event.onChoice( "3rd Floor", lambda { say "Your destination is 3rd Floor" } ) 
   event.onBadChoice( lambda { say "I can not recognize you " } ) 
   say "Thanks for testing Ruby on the Tropo platform"
-  hangup
 else
   puts ">>>>>>>>>>>>>>>Disconnected by the peer!<<<<<<<<<<<<<<<<<"
 end

@@ -217,7 +217,7 @@ module Tropo
       options["repeat"].times do
         begin
           if options["record"]
-            result = @call.promptWithRecord(
+            result = @call.record(
                 options["ttsOrUrl"],
                 grammar.to_s,
                 *options.values_at(*%w[timeout record beep maxTime silenceTimeout])
@@ -227,7 +227,7 @@ module Tropo
             callback_registrar.trigger_event_for :record, result.get("record") # This intentionally deviates from the spec at the moment by not passing in a second argument and by using the name :record! We need to make this consistent.
             return event
           else
-            result = @call.prompt(options["ttsOrUrl"], options["bargein"], grammar, options["choiceConfidence"], options["choiceMode"], options["timeout"])
+            result = @call.ask(options["ttsOrUrl"], options["bargein"], grammar, options["choiceConfidence"], options["choiceMode"], options["timeout"])
             event = TropoEvent.new("choice", result.get('value'))
             callback_registrar.trigger_event_for :choice, result.get("value"), result.get("record") if grammar
             return event

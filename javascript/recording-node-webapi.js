@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 /**
  * Showing with the Express framework http://expressjs.com/
  * Express must be installed for this sample to work

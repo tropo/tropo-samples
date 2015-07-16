@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 dice6=(Math.floor((6-0)*Math.random()) + 1) as Integer
 dice20=(Math.floor((20-0)*Math.random()) + 1) as Integer
 coin=(Math.floor((2-0)*Math.random()) + 1) as Integer

@@ -1,4 +1,10 @@
 <?php
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 
 $channel = $currentCall->channel;
 $network = $currentCall->network;
@@ -120,7 +126,7 @@ function print_results_voice($results) {
     $address[$i] = $location['Address'];
     $i++;
   }
-  $event = prompt($choices,
+  $event = ask($choices,
   			array (
   			  "choices" => '1,2,3,4,5',
   			) 

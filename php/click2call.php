@@ -1,4 +1,11 @@
 <?php
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
+
 // This script requires tropo-rest.class.php
 // from http://github.com/tropo/tropo-webapi-php
 // Download it and place in the same directory as 
@@ -48,7 +55,7 @@ function printTropo() {
   sleep(2); // Pause a moment after they answer.
   say('One moment, connecting you now.');
   transfer($number, array(
-    'playvalue' => 'http://evolution.voxeo.com/library/audio/prompts/misc/ring.wav',
+    'playvalue' => 'https://raw.githubusercontent.com/tropo/pre-recorded_audio_library/master/Telephone/ring.wav',
     'playrepeat' => '10',
     'onTimeout' => 'handleTimeout'
     ));

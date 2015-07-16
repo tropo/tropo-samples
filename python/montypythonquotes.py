@@ -1,6 +1,9 @@
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
+
 # --------------------------------------------
 # A Monty Python quote server (in python)
-# See http://www.tropo.com for more info
 # --------------------------------------------
 
 import re

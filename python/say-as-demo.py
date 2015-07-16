@@ -1,3 +1,7 @@
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
+
 # --------------------------------------------
 #
 #  The application demonstrates how to use say-as constructions
@@ -5,8 +9,6 @@
 #  date, time, 
 #  digits, numbers, 
 #  currency, phone
-#
-# See http://www.tropo.com for more info
 # --------------------------------------------
 #
 answer()

@@ -1,6 +1,11 @@
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 // --------------------------------------------
 // read out the caller ID
-// See http://www.tropo.com for more info
 // --------------------------------------------
 
 function asDigits(instr) {

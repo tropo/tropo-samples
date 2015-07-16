@@ -1,4 +1,12 @@
 <?php
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
+// Plays the Seattle open data feed for 911 calls over the phone
+
 answer();
 sleep(2);
 say ('Welcome to the Seattle <say-as interpret-as="vxml:digit">911</say-as> scanner.');

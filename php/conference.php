@@ -1,4 +1,10 @@
 <?php
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 // See http://bit.ly/confTutorial for a tutorial with this code.
 
 // An array of conference IDs and phone numbers to alert.

@@ -1,13 +1,10 @@
 <?php
-// --------------------------------------------
-// Example of creating outgoing calls
-// See http://www.tropo.com for more info
-// --------------------------------------------
-// 
-// If this script is called via HTTP, the initial "answer();" can be
-// removed.
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
 
-answer();
 event = call("sip:14076463131@10.6.63.201",
       array (
       "answerOnMedia" => false,

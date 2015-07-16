@@ -1,6 +1,11 @@
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 // --------------------------------------------
 // Sample Tropo app in JavaScript
-// See http://www.tropo.com for more info
 // --------------------------------------------
 
 var event=ask("where are you heading?",

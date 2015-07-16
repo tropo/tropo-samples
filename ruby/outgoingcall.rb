@@ -1,7 +1,7 @@
-# If this script is called via HTTP, the initial "answer();" can be
-# removed.
- 
-answer
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
+
 options = { :answerOnMedia => false,
             :callerID      => '+14157044517',
             :timeout       => 12.123,
