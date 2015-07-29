@@ -27,7 +27,7 @@ while ($currentCall->isActive()) {
     'terminator' => '#',
     'choices' => '[1-10 DIGITS]',
     'timeout' => '3',
-    'mode' => 'keypad',
+    'mode' => 'dtmf',
     'voice' => $voice
     ));
   switch($response->name) {
