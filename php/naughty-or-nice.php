@@ -19,10 +19,10 @@ if (stristr($name, 'santa')) {
 // If you text the same name over and over again,
 // I want you to get the same result. But I don't want to track
 // results or have everyone who starts with C always get the same result.
-// So hash the name, and grab the first non-digit character.
-// If it's D, E, or F then you're naughty.
-$val = substr(preg_replace('/\d/g', '', md5(strtolower($name))), 0, 1);
-if (ord($val) > ord ('c'))  { $status = 'NAUGHTY'; }
+// So hash the lowercased name, and grab the first character.
+// If it's not a digit then you're naughty. (3 in 8 chance of being naughty)
+$val = substr(md5(strtolower($name)), 0, 1);
+if (!is_numeric($val))  { $status = 'NAUGHTY'; }
 
 // Respond, but take a moment between responses, to add some realisim.
 say("Hello $name, I'm checking my list.");
