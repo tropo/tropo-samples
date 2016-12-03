@@ -1,3 +1,7 @@
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
+
 @dice6 = 1 + rand(6)
 @dice20 = 1 + rand(20)
 @coin = 1 + rand(2)

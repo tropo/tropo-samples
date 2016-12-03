@@ -1,3 +1,9 @@
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
+
+
+
 VOICE = 'simon' 
 
 #finding the user's area code and subtracting the appropriate hours from serverside GMT

@@ -1,8 +1,11 @@
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 // --------------------------------------------
 // A simple role-playing game 
-// (using some of the characters around the
-//  Voxeo office)
-// See http://www.tropo.com for more info
 // --------------------------------------------
 
 import java.util.Random;
@@ -22,7 +25,7 @@ def getEnemy() {
 
   def size = ["diminutive", " ", "giant", "large", "enormous"]
   def colors = ["red", "green", "blue", "purple", "yellow", "green"]
-  def beast = ["Feinberg", "Matt Henry", "Stephen Neesh", "Pop Tart", "Dan Polfer", "Rob Green", "Rob Patton"]
+  def beast = ["Brian", "Henry", "Stephen", "Pop Tart", "Daniel", "Rob"]
 
   strEnemySize = size[generator.nextInt(size.size())]
   strEnemyColor = colors[generator.nextInt(colors.size())]

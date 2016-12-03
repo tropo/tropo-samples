@@ -1,13 +1,11 @@
 # Ruby ASR Weather for Tropo
-# Copyright 2009 Jonathan Rudenberg
-# Licensed under the MIT License
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
 #
 # Requires a Yahoo! App ID and WeatherBug API Key
 # http://developer.yahoo.com/maps/rest/V1/geocode.html
 # http://weather.weatherbug.com/desktop-weather/api.html
-#
-# Try it out at any of these numbers:
-# POTS: 1-312-957-8992
  
 require 'rexml/document'
 require 'open-uri'
@@ -172,7 +170,7 @@ zip_prompt_options = { :beep => false,
                            say "I'm sorry, I didn't understand what you said"
                          end } }
  
-prompt "I have the weather forecast for #{forecast.city}, say a zip code or area code and prefix if you want a different city.", zip_prompt_options
+ask "I have the weather forecast for #{forecast.city}, say a zip code or area code and prefix if you want a different city.", zip_prompt_options
 say "You may skip by saying a day at any time."
 forecast.read
 say "This concludes the weather forecast for #{forecast.city}"

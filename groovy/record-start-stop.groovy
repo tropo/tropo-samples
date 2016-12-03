@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 say('Welcome to the Tropo recording service.')
 startCallRecording("http://example.com/post_audio?filname=mynewfile.wav")
 

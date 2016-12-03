@@ -1,4 +1,10 @@
 <?php
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 // A demo of using SSML to influence pronounciation 
 // and pacing of Lewis Carroll's famous poem full of
 // nonsense words.

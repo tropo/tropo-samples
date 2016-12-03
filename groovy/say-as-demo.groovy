@@ -1,8 +1,13 @@
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 // --------------------------------------------
 // say-as templates
 // demonstrates how to use <say-as> to change
 // how the text is read out
-// See http://www.tropo.com for more info
 // --------------------------------------------
 
 s_log_prefix = "Log: "

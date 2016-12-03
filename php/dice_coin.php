@@ -1,4 +1,10 @@
 <?php
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 $dice6 = rand(1,6);
 $dice20 = rand(1,20);
 $coin = rand(1,2);

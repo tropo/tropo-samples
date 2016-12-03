@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 var dice6=Math.floor((6-0)*Math.random()) + 1;
 var dice20=Math.floor((20-0)*Math.random()) + 1;
 var coin=Math.floor((2-0)*Math.random()) + 1;

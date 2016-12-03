@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
+// Replace with a valid Yahoo Local API key
+def appid = "KgtDvNrV34Eavq_dUF81vBlVLKAOq7o1tj7Tzvu_kYbKsCtBW190VmrvVHK_0w--"
+
 def asDigits(instr) {
   def s  = '';
  
@@ -17,8 +26,6 @@ def getZipCode() {
 }
 
 def trafficurl = "http://local.yahooapis.com/MapsService/V1"
-
-def appid = "KgtDvNrV34Eavq_dUF81vBlVLKAOq7o1tj7Tzvu_kYbKsCtBW190VmrvVHK_0w--"
 
 say( "Welcome to the Tropo Traffic System, brought to you by Yahoo Local!")
 

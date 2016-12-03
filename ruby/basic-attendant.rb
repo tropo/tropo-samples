@@ -1,6 +1,9 @@
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
+
 # ===========
 # Tropo basic auto attendant sample application in Ruby
-# v0.9 Jason Goecke - Modeled on JS example by jrt
 # ===========
 
 # define the list of contacts

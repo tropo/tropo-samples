@@ -1,12 +1,17 @@
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 // --------------------------------------------
 // Example of creating outgoing calls
-// See http://www.tropo.com for more info
 // --------------------------------------------
 
-event = call("sip:14075551313@10.6.63.201", 
+event = call("+14075551313", 
       {
       answerOnMedia: false,
-      callerID:      "tel:+4075551212",
+      callerID:      "tel:+14075551212",
       timeout:        12.123,
       onAnswer:       function(event){ log("******************** Answered from " + event.value.calledID) },
       onError:        function( ) { log("******************** oops , error *********************") },

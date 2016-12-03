@@ -1,7 +1,9 @@
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
+
 # --------------------------------------------
 # Reads the titles from Slashdot's RSS feed
-# Created by Atul Bargaje
-# See http://www.tropo.com for more info
 # --------------------------------------------
 
 import urllib2

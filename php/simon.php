@@ -1,6 +1,11 @@
 <?php
 
-answer();
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 
 // Set initial state
 $simon = array();

@@ -1,3 +1,7 @@
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
+
 #==========
 #Example that allows you to use Adhearsion (http://adhearsion.com)
 #via DRb with Tropo

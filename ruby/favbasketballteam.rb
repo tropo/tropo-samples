@@ -1,6 +1,9 @@
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
+
 # The application allows you to Yahoo search for your favorite basketball
 # team and the reads back the top 2 results, Title, Summary, URL.
-# Created by Brian F
 
 require 'net/http'
 require 'rexml/document'

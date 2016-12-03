@@ -1,8 +1,9 @@
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
+
 # --------------------------------------------
 # python app that says a random number between 1 and 100
-# Created by Dan York
-# Feb 24, 2008
-# See http://www.tropo.com for more info
 # --------------------------------------------
 
 from random import *

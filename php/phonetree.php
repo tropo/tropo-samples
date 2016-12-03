@@ -1,4 +1,10 @@
 <?php
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 
 // An array of phone numbers that are part of the phone tree.
 $members = array('2125551212', '4155551313');

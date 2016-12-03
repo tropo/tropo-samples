@@ -1,4 +1,6 @@
-answer
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
 
 s_log_prefix = "Log: "
 s_xml_speak_start ="<?xml version='1.0'?><speak>"
@@ -54,5 +56,3 @@ say "Listen to phone"
 log s_log_prefix + s_prompt
 say s_prompt
 say "Good bye and have a nice day!"
-
-hangup

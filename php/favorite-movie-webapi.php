@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+ * Released under the MIT license. See the file LICENSE
+ * for the complete license
+ */
+
 error_reporting(0);
 
 require 'tropo-webapi-php/tropo.class.php';

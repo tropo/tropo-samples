@@ -1,3 +1,7 @@
+# Copyright (c) 2009 - 2015 Tropo, now part of Cisco
+# Released under the MIT license. See the file LICENSE
+# for the complete license
+
 #----------
 #Yahoo local search app using YQL/JSON
 #----------
